@@ -6,6 +6,7 @@ import Socials from "../components/Socials";
 
 function Home() {
   const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -15,17 +16,17 @@ function Home() {
   }, []);
 
   return (
-    <div className="h-screen">
+    <section className="h-screen pt-0">
       {loading ? (
         <Loader />
       ) : (
         <>
-          <Navbar />
-          <HeroSection />
-          <Socials />
+          <Navbar open={open} setOpen={setOpen} />
+          <HeroSection open={open} />
+          <Socials open={open} />
         </>
       )}
-    </div>
+    </section>
   );
 }
 

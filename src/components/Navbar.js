@@ -3,9 +3,7 @@ import logo from "../assets/a2.png";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {HiOutlineArrowRight} from "react-icons/hi";
 
-function NavBar() {
-  const [open, setOpen] = useState(false);
-
+function NavBar({open, setOpen}) {
   const navlinks = [
     {id: "I.", name: "Home", href: "#"},
     {id: "II.", name: "About", href: "#about"},
@@ -15,13 +13,15 @@ function NavBar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-lightBlack ">
+    <header className="fixed top-0 left-0 z-10 w-full bg-lightBlack ">
       <nav className="md:mx-auto md:flex  md:w-11/12 md:items-center md:justify-between">
         <div>
-          <img src={logo} alt="" className="w-28 " />
+          <a href="#">
+            <img src={logo} alt="" className="w-24 md:w-28 " />
+          </a>
         </div>
         <div
-          className="absolute top-10 right-8 text-white md:hidden "
+          className="absolute top-8 right-8 text-white md:hidden "
           onClick={() => setOpen((prevState) => !prevState)}
         >
           {!open ? (
@@ -41,7 +41,7 @@ function NavBar() {
           {navlinks.map((link, index) => (
             <li
               key={index}
-              className="p-2 text-center  md:text-base "
+              className=" p-2 text-center  md:text-base "
               onClick={() => setOpen(false)}
             >
               <a href={link.href} className="py-2 text-lg">

@@ -22,15 +22,26 @@
     font-family: "Roboto", sans-serif;
   }
 
+  a {
+    @apply outline-none;
+  }
+
   html {
     @apply scroll-smooth;
   }
-
   nav {
     font-family: "Playfair Display", serif;
   }
 
   section {
-    @apply text-white pt-28;
+    @apply pt-28 text-white;
+  }
+
+  h6 {
+    font-family: "Playfair Display", serif;
+  }
+  li {
+    /* font-family: "Playfair Display", serif; */
+    /* font-family: "Poppins" sans-serif; */
   }
 }
