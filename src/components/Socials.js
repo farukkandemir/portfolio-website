@@ -7,7 +7,7 @@ function Socials({open}) {
   return (
     <>
       <div
-        className={`fixed bottom-0  flex w-full justify-center gap-6 text-2xl text-white md:fixed md:bottom-24 md:left-24 md:w-auto md:flex-col xl:left-36 ${
+        className={`fixed bottom-0 flex w-full  justify-center gap-6 text-2xl text-white md:fixed md:bottom-24 md:left-24 md:w-auto md:flex-col xl:left-36 ${
           open ? "-z-10" : "z-auto"
         }`}
       >

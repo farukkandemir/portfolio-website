@@ -12,7 +12,7 @@ function Home() {
     setLoading(true);
     setInterval(() => {
       setLoading(false);
-    }, 4000);
+    }, 1000);
   }, []);
 
   return (

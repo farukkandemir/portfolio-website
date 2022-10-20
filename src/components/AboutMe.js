@@ -2,7 +2,26 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <div className="flex flex-col justify-center px-4">
+    <div className="mx-auto mb-32  w-full md:w-3/4 lg:w-2/3">
+      <div className="py-4 text-center ">
+        <h6 className="text-3xl  md:text-4xl ">
+          About <p className="inline text-red">Me</p>
+        </h6>
+      </div>
+
+      <div className="">
+        <p>
+          Faruk Kandemir, 27 years young, born in Turkey & lives in United States of
+          America. Highly motivated creative developer with international client
+          portfolio.
+        </p>
+        <span className="mx-auto mt-10 block h-1 w-20  bg-red"></span>
+        <p className="mt-6 text-gray-300">
+          I am currently a Computer Science student at Northampton Community College. I am
+          planning to graduate and transfer 4-year college to get my B.S degree
+        </p>
+      </div>
+
       {/* <div className="mb-4">
         <h6 className="text-2xl">
           About <span className="text-red">Me</span>

@@ -6,7 +6,7 @@ function About() {
   return (
     <section
       id="about"
-      className="mx-auto min-h-screen w-full max-w-5xl px-3 md:flex  md:w-2/3 "
+      className="mx-auto min-h-screen w-11/12 max-w-5xl px-2 md:w-4/5  md:pt-40"
     >
       <AboutMe />
       <Skills />

@@ -15,7 +15,7 @@ function NavBar({open, setOpen}) {
   return (
     <header className="fixed top-0 left-0 z-10 w-full bg-lightBlack ">
       <nav className="md:mx-auto md:flex  md:w-11/12 md:items-center md:justify-between">
-        <div>
+        <div className="animate-fadeIn delay-100">
           <a href="#">
             <img src={logo} alt="" className="w-24 md:w-28 " />
           </a>
@@ -41,7 +41,7 @@ function NavBar({open, setOpen}) {
           {navlinks.map((link, index) => (
             <li
               key={index}
-              className=" p-2 text-center  md:text-base "
+              className="animate-fadeIn p-2 text-center md:text-base "
               onClick={() => setOpen(false)}
             >
               <a href={link.href} className="py-2 text-lg">
