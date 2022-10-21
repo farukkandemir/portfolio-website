@@ -5,13 +5,15 @@ function HeroSection({open}) {
   const [hover, setHover] = useState(false);
   return (
     <main className="mx-auto h-screen w-full max-w-5xl px-4 pb-40 md:w-2/3">
-      <section className="flex h-full flex-col items-start justify-center">
+      <div className="flex h-full flex-col items-start justify-center pt-28">
         <div className="mb-4 animate-fadeIn">
           <h1 className=" pl-[5px] text-lg text-gray-100 ">Hi, my name is</h1>
         </div>
         <div className=" animate-fadeIn pb-4">
           <h2 className=" text-4xl md:pb-2 md:text-7xl">
-            <span className="text-5xl  tracking-tight text-red md:text-8xl">Faruk </span>
+            <span className="text-5xl  tracking-tight text-rose-800 md:text-8xl">
+              Faruk{" "}
+            </span>
             Kandemir
           </h2>
         </div>
@@ -45,7 +47,7 @@ function HeroSection({open}) {
             <span className="text-lg ">Download CV</span>
           </a>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

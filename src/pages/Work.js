@@ -2,8 +2,10 @@ import React from "react";
 
 function Work() {
   return (
-    <section id="work" className="h-screen text-white">
-      Work
+    <section id="work" className=" ">
+      <div>
+        My Latest <span className="text-red">Work</span>
+      </div>
     </section>
   );
 }

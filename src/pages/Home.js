@@ -12,11 +12,11 @@ function Home() {
     setLoading(true);
     setInterval(() => {
       setLoading(false);
-    }, 1000);
+    }, 4000);
   }, []);
 
   return (
-    <section className="h-screen pt-0">
+    <section className="pt-0">
       {loading ? (
         <Loader />
       ) : (

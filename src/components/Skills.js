@@ -21,7 +21,7 @@ function Skills() {
           <span className="text-red">Skills </span> & Expertise
         </h2>
         <p>
-          <i className="text-gray-300">
+          <i className="text-lightGray">
             A winner is someone who recognizes his God-given talents, works his tail off
             to develop them into skills, and uses these skills to accomplish his goals.
           </i>
@@ -32,8 +32,8 @@ function Skills() {
       <div>
         <div className="mt-6 grid grid-cols-3 gap-3 bg-lightBlack  py-4 md:grid-cols-5 md:gap-6">
           {skills.map((skill, index) => (
-            <span key={index} className="  text-center text-gray-100">
-              <i className={`${skill.class} mb-4  block text-2xl md:text-6xl`}></i>
+            <span key={index} className="  text-center ">
+              <i className={`${skill.class} mb-4  block text-4xl md:text-6xl`}></i>
               <span className="">{skill.name}</span>
             </span>
           ))}

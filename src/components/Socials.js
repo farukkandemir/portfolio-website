@@ -1,15 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import {FaGithub, FaTwitter, FaLinkedin} from "react-icons/fa";
 
-function Socials({open}) {
-  const [scroll, setScroll] = useState("");
-
+function Socials() {
   return (
     <>
       <div
-        className={`fixed bottom-0 flex w-full  justify-center gap-6 text-2xl text-white md:fixed md:bottom-24 md:left-24 md:w-auto md:flex-col xl:left-36 ${
-          open ? "-z-10" : "z-auto"
-        }`}
+        className={`invisible bottom-0 flex w-full justify-center  gap-6 text-2xl text-white md:visible md:fixed md:bottom-24 md:left-24 md:w-auto md:flex-col xl:left-36 `}
       >
         <a
           href="https://github.com/farukkandemir"
