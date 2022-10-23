@@ -5,7 +5,7 @@ function Socials() {
   return (
     <>
       <div
-        className={`invisible bottom-0 flex w-full justify-center  gap-6 text-2xl text-white md:visible md:fixed md:bottom-24 md:left-24 md:w-auto md:flex-col xl:left-36 `}
+        className={`invisible bottom-0 flex w-full justify-center  gap-6 text-2xl text-white md:fixed md:bottom-24 md:left-24 md:w-auto md:flex-col lg:visible xl:left-36 `}
       >
         <a
           href="https://github.com/farukkandemir"
@@ -28,11 +28,11 @@ function Socials() {
         >
           <FaLinkedin />
         </a>
-        <span className="invisible -bottom-24 left-3 h-16 w-[1px] bg-red md:visible md:absolute "></span>
+        <span className="invisible -bottom-24 left-3 h-16 w-[1px] bg-red lg:visible lg:absolute "></span>
       </div>
-      <div className="invisible  fixed bottom-32 right-20 rotate-90 md:visible">
+      <div className="invisible  fixed bottom-32 right-20 rotate-90 lg:visible">
         <p className="animate-pulse">Scroll Down</p>
-        <span className="invisible -bottom-5 -right-16 h-16 w-[1px] rotate-90 bg-red md:visible md:absolute"></span>
+        <span className="invisible -bottom-5 -right-16 h-16 w-[1px] rotate-90 bg-red lg:visible lg:absolute"></span>
       </div>
     </>
   );

@@ -11,9 +11,7 @@ function HeroSection({open}) {
         </div>
         <div className=" animate-fadeIn pb-4">
           <h2 className=" text-4xl md:pb-2 md:text-7xl">
-            <span className="text-5xl  tracking-tight text-rose-800 md:text-8xl">
-              Faruk{" "}
-            </span>
+            <span className="text-5xl  tracking-tight text-red md:text-8xl">Faruk </span>
             Kandemir
           </h2>
         </div>

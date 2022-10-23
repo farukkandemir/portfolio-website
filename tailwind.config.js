@@ -21,6 +21,10 @@ module.exports = {
         },
       },
 
+      gridTemplateColumns: {
+        "project-grid": "repeat(auto-fit, minmax(250px,1fr))",
+      },
+
       animation: {
         fadeIn: "fadeIn 400ms ease-in",
         itemFadeIn: "itemFadeIn 5s ease-in forwards",
