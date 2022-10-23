@@ -12,7 +12,7 @@ function Project({project}) {
     >
       <img
         src={project.href}
-        alt="project-image"
+        alt="projects"
         className="h-3/4 w-full  rounded-[2rem] object-cover object-left p-4 "
       />
 
@@ -20,10 +20,20 @@ function Project({project}) {
         <div className="flex flex-col gap-4 ">
           <p>{project.name}</p>
           <div className="self-start px-2 text-sm">
-            <a href={project.github} target="_blank" className="p-2 text-red">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 text-red"
+            >
               GitHub
             </a>
-            <a href={project.live} target="_blank" className="p-2 text-red">
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 text-red"
+            >
               Live
             </a>
           </div>

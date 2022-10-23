@@ -37,8 +37,8 @@ function AboutMe() {
           </p>
           <span className="mx-auto mt-10 block h-1 w-20  bg-red"></span>
           <p className="mt-6 text-lightGray">
-            I am currently a Computer Science student at Northampton Community College. I
-            am planning to graduate and transfer 4-year college to get my B.S degree
+            I am currently a Computer Science student in Community College. I am planning
+            to graduate and transfer 4-year college to get my B.S degree
           </p>
         </div>
       </motion.div>

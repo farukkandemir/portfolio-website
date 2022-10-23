@@ -11,12 +11,14 @@ function Socials() {
           href="https://github.com/farukkandemir"
           target="_blank"
           className="duration-300 hover:text-red"
+          rel="noreferrer"
         >
           <FaGithub />
         </a>
         <a
           href="https://twitter.com/farukkandemir09"
           target="_blank"
+          rel="noreferrer"
           className="duration-300 hover:text-red"
         >
           <FaTwitter />
@@ -24,6 +26,7 @@ function Socials() {
         <a
           href="https://linkedin.com/farukkandemir"
           target="_blank"
+          rel="noreferrer"
           className="duration-300 hover:text-red"
         >
           <FaLinkedin />
