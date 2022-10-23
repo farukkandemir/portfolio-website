@@ -24,7 +24,7 @@ function Socials() {
           <FaTwitter />
         </a>
         <a
-          href="https://linkedin.com/farukkandemir"
+          href="https://www.linkedin.com/in/faruk-kandemir/"
           target="_blank"
           rel="noreferrer"
           className="duration-300 hover:text-red"

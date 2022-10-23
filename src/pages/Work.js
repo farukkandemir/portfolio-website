@@ -10,7 +10,7 @@ function Work() {
   const [selected, setSelected] = useState("All");
 
   const {ref, inView} = useInView({
-    threshold: 0.1,
+    threshold: 0.03,
   });
   const animation = useAnimation();
 

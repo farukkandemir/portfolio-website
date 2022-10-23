@@ -26,7 +26,14 @@ function HeroSection({open}) {
           </p>
         </div>
 
-        <div className={` mt-10 pl-1 md:pl-2 ${open ? "-z-10" : "z-auto"}`}>
+        <div className={`relative mt-10 pl-1 md:pl-2 ${open ? "-z-10" : "z-auto"}`}>
+          <div
+            className={`absolute -bottom-2 mr-2 animate-bounce  rounded-full border-2 border-solid border-red align-middle ${
+              hover
+                ? "-bottom-3 h-12 w-52 animate-none transition-all duration-300 ease-in-out"
+                : " h-10 w-10 "
+            }`}
+          ></div>
           <a
             href={CV}
             className="relative ml-12 cursor-pointer"
@@ -34,14 +41,6 @@ function HeroSection({open}) {
             onMouseLeave={() => setHover(false)}
             download
           >
-            <div
-              className={`absolute -bottom-2 mr-2 animate-bounce  rounded-full border-2 border-solid border-red align-middle ${
-                hover
-                  ? "-bottom-3 h-12 w-52 animate-none transition-all duration-300 ease-in-out"
-                  : " h-10 w-10 "
-              }`}
-            ></div>
-
             <span className="text-lg ">Download CV</span>
           </a>
         </div>
