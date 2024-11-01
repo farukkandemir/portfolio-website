@@ -7,10 +7,10 @@ type StatType = {
 };
 
 const stats: StatType[] = [
-  { label: "Experience", value: "5+ Years", icon: "🏆" },
+  { label: "Years", value: "5+", icon: "🏆" },
   { label: "Projects", value: "50+", icon: "⚽" },
-  { label: "Position", value: "Full Stack", icon: "👕" },
-  { label: "Team", value: "Remote", icon: "🌍" },
+  { label: "Stack", value: "Full", icon: "👕" },
+  { label: "Base", value: "Remote", icon: "🌍" },
 ];
 
 const About = () => {
@@ -35,16 +35,17 @@ const About = () => {
             <div className="w-16 h-1 bg-emerald-500/20 rounded-full" />
           </div>
 
-          <div className="grid lg:grid-cols-[1fr,auto] gap-12 items-start">
+          <div className="grid lg:grid-cols-[2fr,1fr] gap-12 items-start">
             {/* Profile Content */}
             <div className="space-y-8">
-              <div className="prose prose-zinc dark:prose-invert max-w-none space-y-4">
-                <p className="text-zinc-400 leading-relaxed text-lg">
+              {/* Bio */}
+              <div className="prose prose-zinc dark:prose-invert max-w-none space-y-5">
+                <p className="text-lg text-zinc-300 leading-relaxed">
                   A passionate developer with a strong foundation in modern web
                   technologies. Like a versatile midfielder, I adapt quickly to
                   new challenges and consistently deliver high-quality results.
                 </p>
-                <p className="text-zinc-400 leading-relaxed text-lg">
+                <p className="text-lg text-zinc-300 leading-relaxed">
                   My playing style combines creative problem-solving with
                   technical excellence, making me effective in both independent
                   projects and team collaborations.
@@ -52,66 +53,68 @@ const About = () => {
               </div>
 
               {/* Tech Stack */}
-              <div className="space-y-4 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800/50">
+              <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-zinc-100 font-mono">
                   Technical Skills
                 </h3>
-                <ul className="grid grid-cols-2 gap-3 text-sm">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                   {[
-                    "JavaScript (ES6+)",
+                    "JavaScript",
                     "TypeScript",
                     "React",
                     "Next.js",
                     "Node.js",
                     "TailwindCSS",
                     "PostgreSQL",
-                    "Python",
+                    "AWS",
+                    "Docker",
                   ].map((tech) => (
-                    <li
+                    <div
                       key={tech}
-                      className="flex items-center gap-2 text-zinc-400 bg-zinc-900/50 p-2 rounded-lg border border-zinc-800/50"
+                      className="flex items-center gap-2 text-zinc-400 bg-zinc-900/50 px-4 py-2 rounded-lg border border-zinc-800/50 hover:border-emerald-500/50 hover:text-emerald-300 transition-colors"
                     >
                       <span className="text-emerald-400">▹</span>
-                      {tech}
-                    </li>
+                      <span className="text-sm">{tech}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
 
             {/* Stats Card */}
-            <div className="lg:w-[380px] relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 rounded-xl -rotate-1" />
-              <div className="relative p-6 bg-zinc-900/95 border border-zinc-800/50 rounded-xl shadow-xl">
-                {/* Player Stats */}
+            <div className="relative">
+              <div className="sticky top-24 space-y-6">
+                {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="space-y-2 p-4 rounded-lg bg-zinc-800/50 border border-zinc-700/50"
+                      className="group relative overflow-hidden p-4 bg-zinc-900/50 rounded-xl border border-zinc-800/50 hover:border-emerald-500/50 transition-colors"
                     >
-                      <div className="flex items-center justify-between">
-                        <p className="text-sm text-zinc-400 font-mono">
+                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="relative space-y-2">
+                        <p className="text-3xl font-bold text-emerald-400">
+                          {stat.value}
+                        </p>
+                        <p className="text-sm font-mono text-zinc-400">
                           {stat.label}
                         </p>
-                        <span className="text-xl">{stat.icon}</span>
                       </div>
-                      <p className="text-2xl font-bold text-emerald-400">
-                        {stat.value}
-                      </p>
                     </div>
                   ))}
                 </div>
 
-                {/* Additional Info */}
-                <div className="mt-6 p-4 rounded-lg bg-zinc-800/50 border border-zinc-700/50">
-                  <h4 className="text-sm font-mono text-zinc-400 mb-3 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-emerald-400 rounded-full" />
-                    CURRENT FOCUS
-                  </h4>
+                {/* Current Focus */}
+                <div className="p-4 bg-zinc-900/50 rounded-xl border border-zinc-800/50">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full" />
+                    <h4 className="text-sm font-mono text-zinc-400">
+                      NOW PLAYING
+                    </h4>
+                  </div>
                   <p className="text-zinc-300 leading-relaxed">
-                    Mastering modern web frameworks and exploring new
-                    technologies to enhance development workflow.
+                    Currently focused on building scalable web applications and
+                    exploring new technologies.
                   </p>
                 </div>
               </div>
