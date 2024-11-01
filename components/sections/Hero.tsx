@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { RevealSection } from "../ui/motion";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -50,44 +51,83 @@ const Hero = () => {
           </Link>
         </div>
 
-        {/* Main content */}
-        <div className="w-full max-w-[50rem] space-y-8 bg-gradient-to-br from-zinc-900/95 to-zinc-950/95 p-8 rounded-lg backdrop-blur border border-zinc-800/50 shadow-xl">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <p className="text-emerald-400 font-mono text-sm md:text-base">
-                FULL STACK DEVELOPER
-              </p>
-              <span className="px-2 py-0.5 text-xs font-mono text-emerald-400 border border-emerald-400/50 rounded-full">
-                AVAILABLE FOR PROJECTS
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-zinc-100">
-              Your Name
-              <br />
-              <span className="text-zinc-400">Software Engineer</span>
-            </h1>
-            <p className="text-lg md:text-xl text-zinc-400 max-w-[40rem]">
-              A passionate developer specializing in building exceptional
-              digital experiences. Combining technical expertise with creative
-              problem-solving to deliver innovative solutions.
-            </p>
-          </div>
+        {/* Redesigned Main Content */}
+        <div className="relative w-full max-w-[60rem]">
+          <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-center">
+            {/* Left Column - Main Content */}
+            <div className="space-y-6">
+              {/* Title Section */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="h-px w-12 bg-emerald-400/50" />
+                  <p className="text-emerald-400 font-mono text-sm tracking-wider">
+                    FULL STACK DEVELOPER
+                  </p>
+                </div>
+                
+                <div className="space-y-2">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+                    <span className="text-zinc-100 block">Your Name</span>
+                    <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+                      Software Engineer
+                    </span>
+                  </h1>
+                </div>
+              </div>
 
-          <div className="flex flex-wrap gap-4">
-            <Button
-              size="lg"
-              className="group bg-emerald-600 hover:bg-emerald-700 text-zinc-100 border-emerald-500/20 shadow-lg"
-            >
-              View Projects
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="group border-emerald-500/20 hover:bg-emerald-500/10"
-            >
-              Download Resume
-            </Button>
+              {/* Description */}
+              <div className="max-w-xl">
+                <p className="text-lg text-zinc-400 leading-relaxed">
+                  A passionate developer specializing in building exceptional digital experiences. 
+                  Combining technical expertise with creative problem-solving to deliver innovative solutions.
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button
+                  size="lg"
+                  className="group relative bg-emerald-600 hover:bg-emerald-700 text-zinc-100"
+                >
+                  View Projects
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="group relative border-emerald-500/20 hover:bg-emerald-500/10"
+                >
+                  Download Resume
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Column - Stats/Highlights */}
+            <div className="lg:w-[240px] space-y-4">
+              <div className="p-4 bg-zinc-900/50 backdrop-blur rounded-lg border border-zinc-800/50">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-zinc-400">Experience</span>
+                    <span className="font-mono text-emerald-400">5+ Years</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-zinc-400">Projects</span>
+                    <span className="font-mono text-emerald-400">50+</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-zinc-400">Stack</span>
+                    <span className="font-mono text-emerald-400">Full Stack</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Status Badge */}
+              <div className="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                <p className="text-xs font-mono text-center text-emerald-400">
+                  AVAILABLE FOR PROJECTS
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
