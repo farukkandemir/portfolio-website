@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import Container from "./Container";
 import Link from "next/link";
 import { ModeToggle } from "../modules/ModeToggle";
 
@@ -13,35 +12,20 @@ const navigation = [
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full">
-      <div className="absolute inset-0 bg-background/60 backdrop-blur-xl backdrop-saturate-150" />
-      <Container className="flex h-20">
-        <div className="relative flex flex-1 items-center justify-between">
+    <header className="fixed inset-x-4 sm:inset-x-8 top-6 z-50 flex justify-center">
+      <nav className="flex items-center gap-1 px-3 py-2 rounded-full bg-background/60 backdrop-blur-xl backdrop-saturate-150 border border-border/50 shadow-lg overflow-x-auto max-w-full no-scrollbar">
+        {navigation.map((item) => (
           <Link
-            href="#"
-            className="text-xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50 hover:opacity-80 transition-opacity"
-            aria-label="Home"
+            key={item.href}
+            href={item.href}
+            className="relative px-3 py-2 text-sm font-medium text-muted-foreground rounded-full transition-colors hover:text-foreground hover:bg-muted whitespace-nowrap"
           >
-            Your Name
+            {item.name}
           </Link>
-
-          <nav className="flex items-center gap-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {item.name}
-                <span className="absolute inset-x-0 -bottom-1 h-px bg-gradient-to-r from-primary/0 via-primary/40 to-primary/0 opacity-0 transition-opacity duration-300 hover:opacity-100" />
-              </Link>
-            ))}
-            <div className="pl-2 border-l border-border">
-              <ModeToggle />
-            </div>
-          </nav>
-        </div>
-      </Container>
+        ))}
+        <div className="w-px h-4 bg-border mx-1" />
+        <ModeToggle />
+      </nav>
     </header>
   );
 };
