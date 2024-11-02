@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, useScroll } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 interface RevealProps {
@@ -27,4 +27,4 @@ export function RevealSection({ children, width = "100%" }: RevealProps) {
       </motion.div>
     </div>
   );
-} 
+}

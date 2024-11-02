@@ -55,7 +55,9 @@ const Contact = () => {
           <p className="text-emerald-400 font-mono text-sm tracking-wider">
             06. GET IN TOUCH
           </p>
-          <h2 className="text-4xl font-bold text-zinc-100">Let's Connect</h2>
+          <h2 className="text-4xl font-bold text-zinc-100">
+            Let&apos;s Connect
+          </h2>
           <div className="w-16 h-1 bg-emerald-500/20 rounded-full" />
         </div>
 
@@ -69,8 +71,8 @@ const Contact = () => {
                   <>
                     <p className="text-lg text-zinc-300 text-center">
                       Currently open for new opportunities and interesting
-                      projects. Feel free to reach out if you'd like to discuss
-                      potential collaboration.
+                      projects. Feel free to reach out if you&apos;d like to
+                      discuss potential collaboration.
                     </p>
 
                     <div className="flex justify-center">
