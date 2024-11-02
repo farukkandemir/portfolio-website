@@ -32,23 +32,33 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Social links styled as match stats */}
-        <div className="hidden md:flex fixed left-8 bottom-8 flex-col gap-4 bg-zinc-900/90 p-4 rounded-lg backdrop-blur border border-zinc-800/50">
-          <p className="text-xs font-mono text-emerald-400">CONNECT</p>
+        {/* Redesigned Social Links */}
+        <div className="hidden md:flex fixed left-8 bottom-8 flex-col gap-6">
           <Link
             href="https://github.com"
             target="_blank"
-            className="text-zinc-400 hover:text-emerald-300 transition-colors"
+            className="group flex items-center gap-3 text-zinc-400 hover:text-emerald-300 transition-all duration-300"
           >
-            <Github className="h-5 w-5" />
+            <span className="relative px-3 py-2 bg-zinc-900/50 rounded-lg border border-zinc-800/50 backdrop-blur-sm">
+              <Github className="h-5 w-5" />
+              <span className="absolute left-[calc(100%+0.5rem)] top-1/2 -translate-y-1/2 px-3 py-1.5 text-xs font-mono whitespace-nowrap bg-zinc-900/50 rounded-lg border border-zinc-800/50 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                Follow on GitHub
+              </span>
+            </span>
           </Link>
           <Link
             href="https://linkedin.com"
             target="_blank"
-            className="text-zinc-400 hover:text-emerald-300 transition-colors"
+            className="group flex items-center gap-3 text-zinc-400 hover:text-emerald-300 transition-all duration-300"
           >
-            <Linkedin className="h-5 w-5" />
+            <span className="relative px-3 py-2 bg-zinc-900/50 rounded-lg border border-zinc-800/50 backdrop-blur-sm">
+              <Linkedin className="h-5 w-5" />
+              <span className="absolute left-[calc(100%+0.5rem)] top-1/2 -translate-y-1/2 px-3 py-1.5 text-xs font-mono whitespace-nowrap bg-zinc-900/50 rounded-lg border border-zinc-800/50 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                Connect on LinkedIn
+              </span>
+            </span>
           </Link>
+          <div className="w-px h-24 mx-auto bg-zinc-800" />
         </div>
 
         {/* Redesigned Main Content */}
@@ -64,7 +74,7 @@ const Hero = () => {
                     FULL STACK DEVELOPER
                   </p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
                     <span className="text-zinc-100 block">Your Name</span>
@@ -78,8 +88,9 @@ const Hero = () => {
               {/* Description */}
               <div className="max-w-xl">
                 <p className="text-lg text-zinc-400 leading-relaxed">
-                  A passionate developer specializing in building exceptional digital experiences. 
-                  Combining technical expertise with creative problem-solving to deliver innovative solutions.
+                  A passionate developer specializing in building exceptional
+                  digital experiences. Combining technical expertise with
+                  creative problem-solving to deliver innovative solutions.
                 </p>
               </div>
 
@@ -116,7 +127,9 @@ const Hero = () => {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zinc-400">Stack</span>
-                    <span className="font-mono text-emerald-400">Full Stack</span>
+                    <span className="font-mono text-emerald-400">
+                      Full Stack
+                    </span>
                   </div>
                 </div>
               </div>
