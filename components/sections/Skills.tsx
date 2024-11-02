@@ -10,7 +10,7 @@ const skillCategories: SkillCategory[] = [
   {
     name: "Core Technologies",
     description: "Primary tools and languages I use every day",
-    skills: ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "AWS"],
+    skills: ["TypeScript", "React", "Next.js", "Node.js", "JavaScript"],
   },
   {
     name: "Frontend Expertise",
@@ -22,24 +22,26 @@ const skillCategories: SkillCategory[] = [
       "Redux",
       "React Query",
       "Zustand",
+      "SWR",
+      "Material UI",
     ],
   },
   {
     name: "Backend & Infrastructure",
     description: "Building scalable and reliable systems",
-    skills: ["Express.js", "Prisma", "Docker", "REST APIs", "GraphQL", "tRPC"],
+    skills: [
+      "Express.js",
+      "Prisma",
+      "Firebase",
+      "REST APIs",
+      "MongoDB",
+      "PostgreSQL",
+    ],
   },
   {
     name: "Development & Tools",
     description: "Optimizing workflow and development process",
-    skills: [
-      "Git",
-      "CI/CD",
-      "Testing",
-      "System Design",
-      "Performance",
-      "Analytics",
-    ],
+    skills: ["Git", "CI/CD", "Testing", "Performance", "Analytics"],
   },
 ];
 
