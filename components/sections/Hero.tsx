@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { RevealSection } from "../ui/motion";
-import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -77,7 +76,7 @@ const Hero = () => {
 
                 <div className="space-y-2">
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
-                    <span className="text-zinc-100 block">Your Name</span>
+                    <span className="text-zinc-100 block">Faruk Kandemir</span>
                     <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
                       Software Engineer
                     </span>
@@ -119,7 +118,7 @@ const Hero = () => {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zinc-400">Experience</span>
-                    <span className="font-mono text-emerald-400">5+ Years</span>
+                    <span className="font-mono text-emerald-400">2+ Years</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zinc-400">Projects</span>
