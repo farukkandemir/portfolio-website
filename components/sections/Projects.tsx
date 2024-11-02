@@ -2,10 +2,12 @@ import Container from "../layout/Container";
 import { Button } from "../ui/button";
 import { ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 type ProjectType = {
   title: string;
   description: string;
+  imageSrc: string;
   tech: string[];
   liveUrl?: string;
   githubUrl?: string;
@@ -14,20 +16,13 @@ type ProjectType = {
 
 const projects: ProjectType[] = [
   {
-    title: "Aclymate",
+    title: "Foot Notes",
     description:
-      "A climate tech platform helping businesses track and reduce their carbon emissions. Built with modern web technologies focusing on performance and user experience.",
-    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
-    liveUrl: "https://aclymate.com",
+      "A web app to track favorite soccer teams and players, featuring interactive games and challenges for soccer fans.",
+    imageSrc: "/images/foot-notes.png",
+    tech: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind"],
+    liveUrl: "https://adorable-dango-41ec9a.netlify.app/",
     featured: true,
-  },
-  {
-    title: "Project Two",
-    description:
-      "Description of another significant project showcasing different technical skills and problem-solving abilities.",
-    tech: ["React", "Node.js", "MongoDB", "Docker"],
-    liveUrl: "https://project2.com",
-    githubUrl: "https://github.com/yourusername/project2",
   },
 ];
 
@@ -38,11 +33,9 @@ const Projects = () => {
         {/* Section Title */}
         <div className="flex flex-col items-center text-center space-y-4 mb-16">
           <p className="text-emerald-400 font-mono text-sm tracking-wider">
-            04. MATCH HIGHLIGHTS
+            04. FEATURED PROJECTS
           </p>
-          <h2 className="text-4xl font-bold text-zinc-100">
-            Featured Projects
-          </h2>
+          <h2 className="text-4xl font-bold text-zinc-100">Recent Work</h2>
           <div className="w-16 h-1 bg-emerald-500/20 rounded-full" />
         </div>
 
@@ -57,16 +50,21 @@ const Projects = () => {
                   : "lg:grid-cols-[1fr,2fr]"
               }`}
             >
-              {/* Project Image/Gradient Placeholder */}
+              {/* Project Image */}
               <div
                 className={`relative aspect-[16/9] overflow-hidden rounded-xl border border-zinc-800/50 ${
                   index % 2 === 1 && "lg:order-2"
                 }`}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-emerald-500/5 to-zinc-950/50" />
-                <div className="absolute inset-0 backdrop-blur-[2px]" />
-                {/* Optional pattern overlay */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:4px_4px] opacity-5" />
+                <div className="absolute inset-0 bg-zinc-900/50 backdrop-blur-[2px] group-hover:bg-zinc-900/30 transition-colors duration-300" />
+                <Image
+                  src={project.imageSrc}
+                  alt={`Screenshot of ${project.title}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={index === 0}
+                />
               </div>
 
               {/* Project Info */}
