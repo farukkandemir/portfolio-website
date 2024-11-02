@@ -120,7 +120,8 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <div className="md:hidden">
-        <div className="flex items-center justify-between p-4 rounded-lg bg-zinc-900/85 backdrop-blur-xl backdrop-saturate-150 border border-zinc-800/50">
+        {/* Mobile Header Bar */}
+        <div className="flex items-center justify-between p-4 rounded-xl bg-zinc-900/95 backdrop-blur-xl backdrop-saturate-150 border border-zinc-800/50">
           <Button
             variant="ghost"
             size="icon"
@@ -136,26 +137,33 @@ const Header = () => {
           <ModeToggle />
         </div>
 
+        {/* Mobile Menu Dropdown */}
         {mobileMenuOpen && (
-          <div className="mt-2 p-2 rounded-lg bg-zinc-900/95 backdrop-blur-xl border border-zinc-800/50">
-            {navigation.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={handleClick}
-                className={`
-                  block px-4 py-2 text-sm font-medium rounded-lg
-                  transition-colors duration-200 mb-1 last:mb-0
-                  ${
-                    activeSection === item.href.replace("#", "")
-                      ? "text-emerald-400 bg-zinc-900/50"
-                      : "text-zinc-400 hover:text-emerald-300 hover:bg-zinc-900/30"
-                  }
-                `}
-              >
-                {item.name}
-              </a>
-            ))}
+          <div className="mt-2 p-4 rounded-xl bg-zinc-900/95 backdrop-blur-xl border border-zinc-800/50">
+            <nav className="space-y-1">
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={handleClick}
+                    className={`
+                      flex items-center gap-3 px-4 py-3 rounded-lg
+                      transition-colors duration-200
+                      ${
+                        activeSection === item.href.replace("#", "")
+                          ? "text-emerald-400 bg-zinc-900/70"
+                          : "text-zinc-400 hover:text-emerald-300 hover:bg-zinc-900/50"
+                      }
+                    `}
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span className="font-medium">{item.name}</span>
+                  </a>
+                );
+              })}
+            </nav>
           </div>
         )}
       </div>
