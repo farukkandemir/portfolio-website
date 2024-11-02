@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
 
         {/* Redesigned Social Links */}
-        <div className="hidden md:flex fixed left-8 bottom-8 flex-col gap-6">
+        <div className="hidden md:flex fixed left-8 bottom-8 flex-col gap-6 z-10">
           <Link
             href="https://github.com/farukkandemir"
             target="_blank"

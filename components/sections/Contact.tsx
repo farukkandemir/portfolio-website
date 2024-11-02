@@ -137,7 +137,7 @@ const Contact = () => {
                         type="button"
                         variant="outline"
                         onClick={() => setShowForm(false)}
-                        className="border-zinc-700/50 hover:bg-zinc-800/50"
+                        className="text-zinc-900 bg-zinc-100 hover:bg-zinc-200"
                       >
                         Cancel
                       </Button>
