@@ -3,7 +3,11 @@ import Container from "../layout/Container";
 type StatType = {
   label: string;
   value: string;
-  icon?: string;
+};
+
+type PlayStyleType = {
+  label: string;
+  value: string;
 };
 
 const stats: StatType[] = [
@@ -11,6 +15,13 @@ const stats: StatType[] = [
   { label: "Projects", value: "50+" },
   { label: "Stack", value: "Full" },
   { label: "Base", value: "Remote" },
+];
+
+const playingStyle: PlayStyleType[] = [
+  { label: "Role", value: "Full Stack Developer" },
+  { label: "Focus", value: "Modern Web Solutions" },
+  { label: "Approach", value: "Problem Solver" },
+  { label: "Strength", value: "Team Collaboration" },
 ];
 
 const About = () => {
@@ -27,11 +38,9 @@ const About = () => {
           {/* Section Title */}
           <div className="flex flex-col items-center text-center space-y-4">
             <p className="text-emerald-400 font-mono text-sm tracking-wider">
-              02. PLAYER PROFILE
+              02. ABOUT
             </p>
-            <h2 className="text-4xl font-bold text-zinc-100">
-              About The Player
-            </h2>
+            <h2 className="text-4xl font-bold text-zinc-100">Overview</h2>
             <div className="w-16 h-1 bg-emerald-500/20 rounded-full" />
           </div>
 
@@ -41,47 +50,31 @@ const About = () => {
               {/* Bio */}
               <div className="prose prose-zinc dark:prose-invert max-w-none space-y-5">
                 <p className="text-lg text-zinc-300 leading-relaxed">
-                  A passionate developer with a strong foundation in modern web
-                  technologies. Like a versatile midfielder, I adapt quickly to
-                  new challenges and consistently deliver high-quality results.
+                  A dedicated developer focused on creating efficient and
+                  scalable web solutions. Passionate about learning new
+                  technologies and implementing innovative approaches to solve
+                  complex problems.
                 </p>
                 <p className="text-lg text-zinc-300 leading-relaxed">
-                  My playing style combines creative problem-solving with
-                  technical excellence, making me effective in both independent
-                  projects and team collaborations.
+                  Experienced in both independent development and collaborative
+                  team environments, with a strong emphasis on writing clean,
+                  maintainable code.
                 </p>
               </div>
 
-              {/* Tech Stack */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-zinc-100 font-mono">
-                  Technical Skills
-                </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {[
-                    "JavaScript",
-                    "TypeScript",
-                    "React",
-                    "Next.js",
-                    "Node.js",
-                    "TailwindCSS",
-                    "PostgreSQL",
-                    "Git",
-                    "React Native",
-                    "Express",
-                    "MongoDB",
-                    "Firebase",
-                    "Material UI",
-                  ].map((tech) => (
-                    <div
-                      key={tech}
-                      className="flex items-center gap-2 text-zinc-400 bg-zinc-900/50 px-4 py-2 rounded-lg border border-zinc-800/50 hover:border-emerald-500/50 hover:text-emerald-300 transition-colors"
-                    >
-                      <span className="text-emerald-400">▹</span>
-                      <span className="text-sm">{tech}</span>
-                    </div>
-                  ))}
-                </div>
+              {/* Attributes Grid */}
+              <div className="grid grid-cols-2 gap-3">
+                {playingStyle.map((style) => (
+                  <div
+                    key={style.label}
+                    className="p-4 bg-zinc-900/50 rounded-lg border border-zinc-800/50"
+                  >
+                    <p className="text-sm font-mono text-zinc-400 mb-1">
+                      {style.label}
+                    </p>
+                    <p className="text-zinc-300">{style.value}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -93,7 +86,7 @@ const About = () => {
                   {stats.map((stat) => (
                     <div
                       key={stat.label}
-                      className="group relative overflow-hidden p-4 bg-zinc-900/50 rounded-xl border border-zinc-800/50 hover:border-emerald-500/50 transition-colors"
+                      className="group relative overflow-hidden p-4 bg-zinc-900/50 rounded-xl border border-zinc-800/50"
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       <div className="relative space-y-2">
