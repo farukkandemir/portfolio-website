@@ -11,28 +11,42 @@ type ExperienceType = {
 
 const experiences: ExperienceType[] = [
   {
-    role: "Founder & Full Stack Developer",
+    role: "Junior Full Stack Developer",
     company: "Aclymate",
     duration: "Jan 2023 - Present",
-    location: "Remote",
+    location: "Denver, CO",
     achievements: [
-      "Founded and led development of innovative climate tech platform",
-      "Architected and implemented core platform features using modern tech stack",
-      "Established development processes and technical infrastructure",
+      "Enhanced Aclymate's SaaS platform for carbon footprint calculation by building APIs and expanding features.",
+      "Led Aclymate’s backend development, integrating third-party APIs to improve client accessibility",
+      "Supported platform reliability at both companies by troubleshooting, providing support, and optimizing code.",
     ],
-    skills: ["Next.js", "TypeScript", "Node.js", "AWS", "PostgreSQL"],
+    skills: [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Firebase",
+      "Material UI",
+    ],
   },
   {
-    role: "Senior Full Stack Developer",
+    role: "Full Stack Developer",
     company: "Renoster",
     duration: "2023 - Present",
     location: "Remote",
     achievements: [
-      "Led development of enterprise-level applications",
-      "Implemented scalable architecture and microservices",
+      "Refreshed Renoster’s marketing site, focusing on improved design and user experience for clear messaging.",
+      "Created a dynamic web app for people to be able to buy and sell climate projects.",
       "Collaborated with cross-functional teams to deliver high-impact features",
     ],
-    skills: ["React", "TypeScript", "Node.js", "AWS", "Docker"],
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "React",
+      "PostgreSQL",
+      "Tailwind",
+    ],
   },
 ];
 
