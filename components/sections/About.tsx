@@ -7,10 +7,10 @@ type StatType = {
 };
 
 const stats: StatType[] = [
-  { label: "Years", value: "5+", icon: "🏆" },
-  { label: "Projects", value: "50+", icon: "⚽" },
-  { label: "Stack", value: "Full", icon: "👕" },
-  { label: "Base", value: "Remote", icon: "🌍" },
+  { label: "Years", value: "2+" },
+  { label: "Projects", value: "50+" },
+  { label: "Stack", value: "Full" },
+  { label: "Base", value: "Remote" },
 ];
 
 const About = () => {
@@ -66,8 +66,12 @@ const About = () => {
                     "Node.js",
                     "TailwindCSS",
                     "PostgreSQL",
-                    "AWS",
-                    "Docker",
+                    "Git",
+                    "React Native",
+                    "Express",
+                    "MongoDB",
+                    "Firebase",
+                    "Material UI",
                   ].map((tech) => (
                     <div
                       key={tech}
