@@ -34,7 +34,7 @@ const Hero = () => {
         {/* Redesigned Social Links */}
         <div className="hidden md:flex fixed left-8 bottom-8 flex-col gap-6">
           <Link
-            href="https://github.com"
+            href="https://github.com/farukkandemir"
             target="_blank"
             className="group flex items-center gap-3 text-zinc-400 hover:text-emerald-300 transition-all duration-300"
           >
@@ -46,7 +46,7 @@ const Hero = () => {
             </span>
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/farukkandemir/"
             target="_blank"
             className="group flex items-center gap-3 text-zinc-400 hover:text-emerald-300 transition-all duration-300"
           >
@@ -95,20 +95,18 @@ const Hero = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button
-                  size="lg"
-                  className="group relative bg-emerald-600 hover:bg-emerald-700 text-zinc-100"
-                >
-                  View Projects
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="group relative border-emerald-500/20 hover:bg-emerald-500/10"
-                >
-                  Download Resume
-                </Button>
+                <a href="/assets/resume.pdf" download>
+                  <Button
+                    size="lg"
+                    className="group relative bg-emerald-600 hover:bg-emerald-700 text-zinc-100"
+                    onClick={() => {
+                      // window.open("/resume.pdf", "_blank");
+                    }}
+                  >
+                    Download Resume
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                </a>
               </div>
             </div>
 

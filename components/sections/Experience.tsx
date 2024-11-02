@@ -42,7 +42,8 @@ const Experience = () => {
       <Container>
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-0 h-full w-px bg-emerald-900/20" />
+          <div className="absolute right-0 top-1/4 w-1/3 h-1/3 bg-emerald-500/10 blur-3xl rounded-full" />
+          <div className="absolute left-0 bottom-1/4 w-1/3 h-1/3 bg-emerald-500/10 blur-3xl rounded-full" />
         </div>
 
         {/* Section Title */}
@@ -56,51 +57,82 @@ const Experience = () => {
           <div className="w-16 h-1 bg-emerald-500/20 rounded-full" />
         </div>
 
-        {/* Experience Timeline */}
+        {/* Experience Cards */}
         <div className="relative space-y-12">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="relative grid grid-cols-1 lg:grid-cols-[1fr,2fr] gap-8 lg:gap-16"
+              className="relative grid grid-cols-1 lg:grid-cols-[1fr,2fr] gap-8"
             >
-              {/* Timeline Marker */}
-              <div className="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-emerald-500 bg-zinc-950" />
+              {/* Enhanced Company Info - More Compact */}
+              <div className="relative lg:text-right">
+                <div className="sticky top-24">
+                  {/* Company Card */}
+                  <div className="relative p-4 bg-zinc-900/30 rounded-lg border border-zinc-800/50">
+                    {/* Company Name with Accent */}
+                    <div className="relative mb-3">
+                      <div className="absolute -left-1 top-0 bottom-0 w-1 bg-emerald-500/20 rounded-full" />
+                      <h3 className="text-xl font-bold text-zinc-100 pl-3">
+                        {exp.company}
+                      </h3>
+                    </div>
 
-              {/* Company Info */}
-              <div className="lg:text-right space-y-2">
-                <h3 className="text-xl font-bold text-zinc-100">
-                  {exp.company}
-                </h3>
-                <p className="font-mono text-sm text-emerald-400">
-                  {exp.duration}
-                </p>
-                <p className="text-zinc-400">{exp.location}</p>
+                    {/* Duration and Location - Simplified */}
+                    <div className="space-y-2">
+                      <span className="inline-block px-2 py-1 text-sm font-mono text-emerald-400 bg-emerald-500/10 rounded-md">
+                        {exp.duration}
+                      </span>
+                      <div className="flex items-center justify-end">
+                        <span className="px-2 py-1 text-sm text-zinc-300 bg-zinc-800/50 rounded-md">
+                          {exp.location}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Role Details */}
-              <div className="space-y-4 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800/50">
-                <h4 className="text-lg font-semibold text-zinc-100">
-                  {exp.role}
-                </h4>
+              <div className="relative">
+                {/* Connector Line */}
+                <div className="absolute -left-4 top-0 bottom-0 w-px bg-zinc-800" />
 
-                <ul className="space-y-2">
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="flex gap-2 text-zinc-400">
-                      <span className="text-emerald-400 shrink-0">▹</span>
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Content */}
+                <div className="relative pl-8 space-y-6">
+                  {/* Role Title */}
+                  <div className="relative">
+                    {/* Connector Dot */}
+                    <div className="absolute -left-[2.15rem] top-3 w-3 h-3 rounded-full bg-emerald-500/20 ring-2 ring-emerald-500/30" />
+                    <h4 className="text-lg font-semibold text-zinc-100 bg-zinc-900/50 inline-block px-4 py-2 rounded-lg">
+                      {exp.role}
+                    </h4>
+                  </div>
 
-                <div className="flex flex-wrap gap-2 pt-4">
-                  {exp.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 text-xs font-mono text-emerald-300 bg-emerald-500/10 rounded-full"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {/* Achievements */}
+                  <div className="space-y-4 bg-zinc-900/30 rounded-lg p-6 border border-zinc-800/50">
+                    <ul className="space-y-3">
+                      {exp.achievements.map((achievement, i) => (
+                        <li key={i} className="flex gap-3 text-zinc-400">
+                          <span className="text-emerald-400 shrink-0">▹</span>
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Skills */}
+                    <div className="pt-4 border-t border-zinc-800/50">
+                      <div className="flex flex-wrap gap-2">
+                        {exp.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 text-xs font-mono text-emerald-300 bg-emerald-500/10 rounded-full"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
