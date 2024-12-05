@@ -21,7 +21,7 @@ const projects: ProjectType[] = [
       "A web app to track favorite soccer teams and players, featuring interactive games and challenges for soccer fans.",
     imageSrc: "/images/foot-notes.png",
     tech: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind"],
-    liveUrl: "https://adorable-dango-41ec9a.netlify.app/",
+    liveUrl: "https://chantify.netlify.app/",
     featured: true,
   },
 ];
