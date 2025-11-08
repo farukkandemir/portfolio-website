@@ -7,17 +7,5 @@ import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
 
 export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-    </>
-  );
+  return <main>hello world</main>;
 }

@@ -72,7 +72,4 @@ body {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-[#0A0A0A] text-[#FAFAFA];
-  }
 }
