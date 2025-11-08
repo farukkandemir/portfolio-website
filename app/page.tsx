@@ -189,43 +189,65 @@ export default function Home() {
 
             <div className="space-y-8">
               {/* Project */}
-              <article className="group cursor-pointer">
-                <h4 className="text-2xl font-light mb-2">Cinemora</h4>
-                <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
-                  A movie organization platform with personal collections,
-                  watching lists, and smart organization features for movie
-                  enthusiasts.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-4 text-sm text-gray-500 font-light">
-                    <span>TanStack Start</span>
-                    <span>TypeScript</span>
-                    <span>Shadcn</span>
-                    <span>Supabase</span>
-                    <span>Tailwind</span>
+              <a
+                href="https://cinemora.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <article className="cursor-pointer">
+                  <h4 className="text-2xl font-light mb-2 group-hover:text-gray-800 transition-colors">
+                    Cinemora
+                  </h4>
+                  <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
+                    A movie organization platform with personal collections,
+                    watching lists, and smart organization features for movie
+                    enthusiasts.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-4 text-sm text-gray-500 font-light">
+                      <span>TanStack Start</span>
+                      <span>TypeScript</span>
+                      <span>Shadcn</span>
+                      <span>Supabase</span>
+                      <span>Tailwind</span>
+                    </div>
+                    <span className="text-sm text-gray-400 font-light">
+                      2024
+                    </span>
                   </div>
-                  <span className="text-sm text-gray-400 font-light">2024</span>
-                </div>
-              </article>
+                </article>
+              </a>
 
               {/* Project */}
-              <article className="group cursor-pointer">
-                <h4 className="text-2xl font-light mb-2">Foot Notes</h4>
-                <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
-                  A web app to track favorite soccer teams and players,
-                  featuring interactive games and challenges for soccer fans.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-4 text-sm text-gray-500 font-light">
-                    <span>Next.js</span>
-                    <span>TypeScript</span>
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>Tailwind</span>
+              <a
+                href="https://chantify.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <article className="cursor-pointer">
+                  <h4 className="text-2xl font-light mb-2 group-hover:text-gray-800 transition-colors">
+                    Foot Notes
+                  </h4>
+                  <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
+                    A web app to track favorite soccer teams and players,
+                    featuring interactive games and challenges for soccer fans.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-4 text-sm text-gray-500 font-light">
+                      <span>Next.js</span>
+                      <span>TypeScript</span>
+                      <span>Node.js</span>
+                      <span>MongoDB</span>
+                      <span>Tailwind</span>
+                    </div>
+                    <span className="text-sm text-gray-400 font-light">
+                      2024
+                    </span>
                   </div>
-                  <span className="text-sm text-gray-400 font-light">2024</span>
-                </div>
-              </article>
+                </article>
+              </a>
             </div>
           </div>
         </section>
