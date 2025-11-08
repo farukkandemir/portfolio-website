@@ -27,7 +27,7 @@ export default function Home() {
         >
           {/* Skills */}
           <div className="space-y-4">
-            <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider">
+            <h4 className="text-sm font-light text-gray-400 tracking-wider">
               core technologies
             </h4>
             <div className="space-y-2">
@@ -40,7 +40,7 @@ export default function Home() {
               <div className="text-sm font-light text-gray-600">node.js</div>
             </div>
 
-            <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider mt-6">
+            <h4 className="text-sm font-light text-gray-400 tracking-wider mt-6">
               frontend expertise
             </h4>
             <div className="space-y-2">
@@ -56,7 +56,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider mt-6">
+            <h4 className="text-sm font-light text-gray-400 tracking-wider mt-6">
               backend & infrastructure
             </h4>
             <div className="space-y-2">
@@ -68,7 +68,7 @@ export default function Home() {
               <div className="text-sm font-light text-gray-600">rest apis</div>
             </div>
 
-            <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider mt-6">
+            <h4 className="text-sm font-light text-gray-400 tracking-wider mt-6">
               development tools
             </h4>
             <div className="space-y-2">
