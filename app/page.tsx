@@ -210,22 +210,53 @@ export default function Home() {
         {/* Experience */}
         <section id="experience" className="mb-24">
           <div>
-            <div className="flex items-center space-x-4 mb-12">
-              <h3 className="text-3xl font-light tracking-tight">about</h3>
+            <div className="flex items-center space-x-4 mb-16">
+              <h3 className="text-3xl font-light tracking-tight">experience</h3>
               <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
             </div>
 
-            <div className="max-w-2xl space-y-6 text-gray-700">
-              <p className="text-lg font-light leading-relaxed">
-                focused full stack developer with expertise in modern web
-                technologies. passionate about creating efficient, scalable
-                solutions and delivering exceptional user experiences.
-              </p>
-              <p className="text-lg font-light leading-relaxed">
-                experienced in both frontend and backend development, with a
-                keen eye for design and a commitment to writing clean,
-                maintainable code.
-              </p>
+            <div className="space-y-8">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xl font-light text-gray-900">
+                    Full Stack Developer
+                  </h4>
+                  <span className="text-sm text-gray-500 font-light">
+                    2023 — Present
+                  </span>
+                </div>
+                <p className="text-lg font-light text-black">
+                  TechCorp Solutions
+                </p>
+                <div className="w-8 h-px bg-gray-200 mt-4"></div>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xl font-light text-gray-900">
+                    Frontend Developer
+                  </h4>
+                  <span className="text-sm text-gray-500 font-light">
+                    2022 — 2023
+                  </span>
+                </div>
+                <p className="text-lg font-light text-black">
+                  Digital Agency Pro
+                </p>
+                <div className="w-8 h-px bg-gray-200 mt-4"></div>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="text-xl font-light text-gray-900">
+                    Junior Developer
+                  </h4>
+                  <span className="text-sm text-gray-500 font-light">
+                    2021 — 2022
+                  </span>
+                </div>
+                <p className="text-lg font-light text-black">StartupXYZ</p>
+              </div>
             </div>
           </div>
         </section>
