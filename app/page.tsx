@@ -194,7 +194,7 @@ function MobileNavigation() {
                   <span>twitter</span>
                 </a>
                 <a
-                  href="mailto:hello@farukkandemir.dev"
+                  href="mailto:farukkandemir.dev@gmail.com"
                   className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
                 >
                   <span className="w-2 h-2 bg-primary/20 rounded-full group-hover:bg-primary/40 transition-colors" />
@@ -574,10 +574,10 @@ export default function Home() {
           <div className="space-y-8">
             <div>
               <a
-                href="mailto:hello@farukkandemir.dev"
+                href="mailto:farukkandemir.dev@gmail.com"
                 className="text-lg text-foreground hover:text-primary transition-colors font-light"
               >
-                hello@farukkandemir.dev
+                farukkandemir.dev@gmail.com
               </a>
             </div>
 
