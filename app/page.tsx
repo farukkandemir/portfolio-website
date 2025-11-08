@@ -1,18 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ModeToggle } from "@/components/modules/ModeToggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-black relative overflow-hidden">
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      {/* Theme Toggle */}
+      <div className="fixed top-6 right-6 z-50">
+        <ModeToggle />
+      </div>
+
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgba(0,0,0,.15) 1px, transparent 0)",
-            backgroundSize: "20px 20px",
+              "radial-gradient(circle at 1px 1px, hsl(var(--muted-foreground) / 0.08) 1px, transparent 0)",
+            backgroundSize: "24px 24px",
           }}
         />
       </div>
@@ -27,55 +33,73 @@ export default function Home() {
         >
           {/* Skills */}
           <div className="space-y-4">
-            <h4 className="text-sm font-light text-gray-400 tracking-wider">
+            <h4 className="text-sm font-light text-muted-foreground tracking-wider">
               core technologies
             </h4>
             <div className="space-y-2">
-              <div className="text-sm font-light text-gray-600">
+              <div className="text-sm font-light text-muted-foreground">
                 typescript & javascript
               </div>
-              <div className="text-sm font-light text-gray-600">
+              <div className="text-sm font-light text-muted-foreground">
                 react & next.js
               </div>
-              <div className="text-sm font-light text-gray-600">node.js</div>
+              <div className="text-sm font-light text-muted-foreground">
+                node.js
+              </div>
             </div>
 
-            <h4 className="text-sm font-light text-gray-400 tracking-wider mt-6">
+            <h4 className="text-sm font-light text-muted-foreground tracking-wider mt-6">
               frontend expertise
             </h4>
             <div className="space-y-2">
-              <div className="text-sm font-light text-gray-600">
+              <div className="text-sm font-light text-muted-foreground">
                 tailwind css
               </div>
-              <div className="text-sm font-light text-gray-600">
+              <div className="text-sm font-light text-muted-foreground">
                 framer motion
               </div>
-              <div className="text-sm font-light text-gray-600">shadcn/ui</div>
-              <div className="text-sm font-light text-gray-600">
+              <div className="text-sm font-light text-muted-foreground">
+                shadcn/ui
+              </div>
+              <div className="text-sm font-light text-muted-foreground">
                 redux & zustand
               </div>
             </div>
 
-            <h4 className="text-sm font-light text-gray-400 tracking-wider mt-6">
+            <h4 className="text-sm font-light text-muted-foreground tracking-wider mt-6">
               backend & infrastructure
             </h4>
             <div className="space-y-2">
-              <div className="text-sm font-light text-gray-600">express.js</div>
-              <div className="text-sm font-light text-gray-600">prisma</div>
-              <div className="text-sm font-light text-gray-600">
+              <div className="text-sm font-light text-muted-foreground">
+                express.js
+              </div>
+              <div className="text-sm font-light text-muted-foreground">
+                prisma
+              </div>
+              <div className="text-sm font-light text-muted-foreground">
                 mongodb & postgresql
               </div>
-              <div className="text-sm font-light text-gray-600">rest apis</div>
+              <div className="text-sm font-light text-muted-foreground">
+                rest apis
+              </div>
             </div>
 
-            <h4 className="text-sm font-light text-gray-400 tracking-wider mt-6">
+            <h4 className="text-sm font-light text-muted-foreground tracking-wider mt-6">
               development tools
             </h4>
             <div className="space-y-2">
-              <div className="text-sm font-light text-gray-600">git</div>
-              <div className="text-sm font-light text-gray-600">docker</div>
-              <div className="text-sm font-light text-gray-600">aws</div>
-              <div className="text-sm font-light text-gray-600">ci/cd</div>
+              <div className="text-sm font-light text-muted-foreground">
+                git
+              </div>
+              <div className="text-sm font-light text-muted-foreground">
+                docker
+              </div>
+              <div className="text-sm font-light text-muted-foreground">
+                aws
+              </div>
+              <div className="text-sm font-light text-muted-foreground">
+                ci/cd
+              </div>
             </div>
           </div>
         </motion.div>
@@ -95,54 +119,54 @@ export default function Home() {
               href="https://github.com/farukkandemir"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-3 text-sm font-light text-gray-500 hover:text-black transition-colors group"
+              className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
             >
-              <span className="w-2 h-2 bg-gray-300 rounded-full group-hover:bg-black transition-colors"></span>
+              <span className="w-2 h-2 bg-muted rounded-full group-hover:bg-primary transition-colors"></span>
               <span>github</span>
             </motion.a>
             <motion.a
               href="https://linkedin.com/in/farukkandemir"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-3 text-sm font-light text-gray-500 hover:text-black transition-colors group"
+              className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
             >
-              <span className="w-2 h-2 bg-gray-300 rounded-full group-hover:bg-black transition-colors"></span>
+              <span className="w-2 h-2 bg-muted rounded-full group-hover:bg-primary transition-colors"></span>
               <span>linkedin</span>
             </motion.a>
             <motion.a
               href="https://twitter.com/farukkandemir"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-3 text-sm font-light text-gray-500 hover:text-black transition-colors group"
+              className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
             >
-              <span className="w-2 h-2 bg-gray-300 rounded-full group-hover:bg-black transition-colors"></span>
+              <span className="w-2 h-2 bg-muted rounded-full group-hover:bg-primary transition-colors"></span>
               <span>twitter</span>
             </motion.a>
           </div>
 
           {/* Divider */}
-          <div className="w-8 h-px bg-gray-200"></div>
+          <div className="w-8 h-px bg-border"></div>
 
           {/* Contact */}
           <div className="space-y-2">
             <motion.a
               href="mailto:hello@farukkandemir.dev"
-              className="flex items-center space-x-3 text-sm font-light text-gray-500 hover:text-black transition-colors group"
+              className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
             >
-              <span className="w-2 h-2 bg-gray-300 rounded-full group-hover:bg-black transition-colors"></span>
+              <span className="w-2 h-2 bg-muted rounded-full group-hover:bg-primary transition-colors"></span>
               <span>email</span>
             </motion.a>
           </div>
 
           {/* Divider */}
-          <div className="w-8 h-px bg-gray-200"></div>
+          <div className="w-8 h-px bg-border"></div>
 
           {/* Scroll to top */}
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center space-x-3 text-sm font-light text-gray-500 hover:text-black transition-colors group cursor-pointer"
+            className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group cursor-pointer"
           >
-            <span className="w-2 h-2 bg-gray-300 rounded-full group-hover:bg-black transition-colors"></span>
+            <span className="w-2 h-2 bg-muted rounded-full group-hover:bg-primary transition-colors"></span>
             <span>top</span>
           </motion.button>
         </motion.div>
@@ -155,12 +179,12 @@ export default function Home() {
             {/* Name */}
             <div className="mb-8">
               <h1
-                className="text-2xl font-light tracking-wide text-gray-600 mb-2"
+                className="text-2xl font-light tracking-wide text-muted-foreground mb-2"
                 style={{ fontFamily: "var(--font-geist-sans)" }}
               >
                 faruk kandemir
               </h1>
-              <div className="w-8 h-px bg-gray-300"></div>
+              <div className="w-8 h-px bg-muted"></div>
             </div>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 tracking-tight">
@@ -169,7 +193,7 @@ export default function Home() {
               problem solver & builder
             </h2>
 
-            <p className="text-lg text-gray-600 font-light max-w-2xl leading-relaxed">
+            <p className="text-lg text-muted-foreground font-light max-w-2xl leading-relaxed">
               i build software that solves real problems, from concept to
               deployment, with a focus on performance, accessibility, and user
               experience
@@ -196,23 +220,23 @@ export default function Home() {
                 className="block group"
               >
                 <article className="cursor-pointer">
-                  <h4 className="text-2xl font-light mb-2 group-hover:text-gray-800 transition-colors">
+                  <h4 className="text-2xl font-light mb-2 group-hover:text-foreground transition-colors">
                     Cinemora
                   </h4>
-                  <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
+                  <p className="text-muted-foreground font-light leading-relaxed mb-4 max-w-lg">
                     A movie organization platform with personal collections,
                     watching lists, and smart organization features for movie
                     enthusiasts.
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex gap-4 text-sm text-gray-500 font-light">
+                    <div className="flex gap-4 text-sm text-muted-foreground font-light">
                       <span>TanStack Start</span>
                       <span>TypeScript</span>
                       <span>Shadcn</span>
                       <span>Supabase</span>
                       <span>Tailwind</span>
                     </div>
-                    <span className="text-sm text-gray-400 font-light">
+                    <span className="text-sm text-muted-foreground font-light">
                       2024
                     </span>
                   </div>
@@ -227,22 +251,22 @@ export default function Home() {
                 className="block group"
               >
                 <article className="cursor-pointer">
-                  <h4 className="text-2xl font-light mb-2 group-hover:text-gray-800 transition-colors">
+                  <h4 className="text-2xl font-light mb-2 group-hover:text-foreground transition-colors">
                     Foot Notes
                   </h4>
-                  <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
+                  <p className="text-muted-foreground font-light leading-relaxed mb-4 max-w-lg">
                     A web app to track favorite soccer teams and players,
                     featuring interactive games and challenges for soccer fans.
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex gap-4 text-sm text-gray-500 font-light">
+                    <div className="flex gap-4 text-sm text-muted-foreground font-light">
                       <span>Next.js</span>
                       <span>TypeScript</span>
                       <span>Node.js</span>
                       <span>MongoDB</span>
                       <span>Tailwind</span>
                     </div>
-                    <span className="text-sm text-gray-400 font-light">
+                    <span className="text-sm text-muted-foreground font-light">
                       2024
                     </span>
                   </div>
@@ -263,44 +287,46 @@ export default function Home() {
             <div className="space-y-8">
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="text-xl font-light text-gray-900">
+                  <h4 className="text-xl font-light text-foreground">
                     Full Stack Developer
                   </h4>
-                  <span className="text-sm text-gray-400 font-light">
+                  <span className="text-sm text-muted-foreground font-light">
                     Oct 2024 — Present
                   </span>
                 </div>
-                <p className="text-base font-light text-gray-500 mb-4">
+                <p className="text-base font-light text-muted-foreground mb-4">
                   Enbasis
                 </p>
-                <div className="w-8 h-px bg-gray-200"></div>
+                <div className="w-8 h-px bg-border"></div>
               </div>
 
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="text-xl font-light text-gray-800">
+                  <h4 className="text-xl font-light text-foreground">
                     Full Stack Developer
                   </h4>
-                  <span className="text-sm text-gray-400 font-light">
+                  <span className="text-sm text-muted-foreground font-light">
                     Sep 2023 — Sep 2024
                   </span>
                 </div>
-                <p className="text-base font-light text-gray-500 mb-4">
+                <p className="text-base font-light text-muted-foreground mb-4">
                   Renoster
                 </p>
-                <div className="w-8 h-px bg-gray-200"></div>
+                <div className="w-8 h-px bg-border"></div>
               </div>
 
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <h4 className="text-xl font-light text-gray-700">
+                  <h4 className="text-xl font-light text-foreground">
                     Junior Full Stack Developer
                   </h4>
-                  <span className="text-sm text-gray-400 font-light">
+                  <span className="text-sm text-muted-foreground font-light">
                     Jan 2023 — Dec 2024
                   </span>
                 </div>
-                <p className="text-base font-light text-gray-500">Aclymate</p>
+                <p className="text-base font-light text-muted-foreground">
+                  Aclymate
+                </p>
               </div>
             </div>
           </div>
@@ -310,7 +336,7 @@ export default function Home() {
       {/* Footer/Contact */}
       <footer
         id="contact"
-        className="border-t border-gray-100 py-16 px-8 lg:px-32 bg-gray-50/30 relative max-w-6xl mx-auto"
+        className="border-t border-border py-16 px-8 lg:px-32 bg-muted/30 relative max-w-6xl mx-auto"
       >
         <div className="text-left">
           <div className="flex items-center space-x-4 mb-8">
@@ -323,14 +349,14 @@ export default function Home() {
             <div>
               <a
                 href="mailto:hello@farukkandemir.dev"
-                className="text-lg text-gray-700 hover:text-black transition-colors font-light"
+                className="text-lg text-foreground hover:text-primary transition-colors font-light"
               >
                 hello@farukkandemir.dev
               </a>
             </div>
 
-            <div className="pt-8 border-t border-gray-200">
-              <p className="text-sm text-gray-400 font-light">
+            <div className="pt-8 border-t border-border">
+              <p className="text-sm text-muted-foreground font-light">
                 © 2024 faruk kandemir. all rights reserved.
               </p>
             </div>
