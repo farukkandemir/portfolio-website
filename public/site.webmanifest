@@ -1,0 +1,30 @@
+{
+  "name": "Faruk Kandemir - Full Stack Developer",
+  "short_name": "Faruk Kandemir",
+  "description": "Portfolio of Faruk Kandemir, Full Stack Developer specializing in React, Next.js, and modern web technologies",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f8",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["portfolio", "technology", "web-development"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  text-transform: lowercase;
 }
 
 @layer utilities {
@@ -13,58 +18,34 @@ body {
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+  html {
+    scroll-behavior: smooth;
   }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-geist-sans);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-transform: lowercase;
+  }
+
+  /* Override text-transform for specific elements if needed */
+  .uppercase {
+    text-transform: uppercase !important;
+  }
+
+  .capitalize {
+    text-transform: capitalize !important;
+  }
+
+  .normal-case {
+    text-transform: none !important;
   }
 }
 
@@ -72,7 +53,60 @@ body {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-[#0A0A0A] text-[#FAFAFA];
+
+  :root {
+    /* Soft matte light theme */
+    --background: 40 9% 98%; /* Warm off-white */
+    --foreground: 40 3% 12%; /* Soft charcoal */
+    --card: 40 8% 96%; /* Subtle warm gray */
+    --card-foreground: 40 4% 15%; /* Deep matte charcoal */
+    --popover: 40 8% 96%; /* Matching card color */
+    --popover-foreground: 40 4% 15%;
+    --primary: 40 6% 18%; /* Rich matte charcoal */
+    --primary-foreground: 40 9% 98%;
+    --secondary: 40 6% 92%; /* Subtle warm gray */
+    --secondary-foreground: 40 4% 15%;
+    --muted: 40 4% 88%; /* Softer muted background */
+    --muted-foreground: 40 3% 45%; /* Balanced text gray */
+    --accent: 40 6% 92%; /* Subtle accent */
+    --accent-foreground: 40 4% 15%;
+    --destructive: 0 72% 51%; /* Muted red */
+    --destructive-foreground: 40 9% 98%;
+    --border: 40 4% 85%; /* Soft matte border */
+    --input: 40 4% 88%; /* Input background */
+    --ring: 40 6% 18%; /* Focus ring */
+    --chart-1: 40 76% 55%; /* Warm emerald */
+    --chart-2: 25 85% 60%; /* Soft amber */
+    --chart-3: 210 40% 55%; /* Muted blue */
+    --chart-4: 15 75% 58%; /* Warm green */
+    --chart-5: 280 45% 58%; /* Soft purple */
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* Soft matte dark theme */
+    --background: 40 8% 6%; /* Deep warm charcoal */
+    --foreground: 40 9% 95%; /* Soft off-white */
+    --card: 40 6% 8%; /* Slightly lighter charcoal */
+    --card-foreground: 40 9% 95%;
+    --popover: 40 6% 8%;
+    --popover-foreground: 40 9% 95%;
+    --primary: 40 9% 92%; /* Warm light accent */
+    --primary-foreground: 40 8% 6%;
+    --secondary: 40 4% 12%; /* Muted charcoal */
+    --secondary-foreground: 40 9% 95%;
+    --muted: 40 4% 12%; /* Consistent muted */
+    --muted-foreground: 40 5% 65%; /* Balanced gray */
+    --accent: 40 4% 12%; /* Subtle accent */
+    --accent-foreground: 40 9% 95%;
+    --destructive: 0 65% 55%; /* Muted red */
+    --destructive-foreground: 40 9% 95%;
+    --border: 40 4% 15%; /* Soft matte border */
+    --input: 40 4% 12%; /* Input background */
+    --ring: 40 9% 92%; /* Light focus ring */
+    --chart-1: 40 76% 60%; /* Bright emerald */
+    --chart-2: 25 85% 65%; /* Warm amber */
+    --chart-3: 210 40% 60%; /* Soft blue */
+    --chart-4: 15 75% 63%; /* Warm green */
+    --chart-5: 280 45% 63%; /* Soft purple */
   }
 }
