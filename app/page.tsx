@@ -310,59 +310,30 @@ export default function Home() {
       {/* Footer/Contact */}
       <footer
         id="contact"
-        className="border-t border-gray-100 py-16 px-8 bg-gray-50/30"
+        className="border-t border-gray-100 py-16 px-8 lg:px-32 bg-gray-50/30 relative max-w-6xl mx-auto"
       >
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-4 mb-8">
-              <div className="flex-1 h-px bg-gradient-to-l from-gray-200 to-transparent"></div>
-              <h3 className="text-3xl font-light tracking-tight px-8">
-                let's connect
-              </h3>
-              <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
+        <div className="text-left">
+          <div className="flex items-center space-x-4 mb-8">
+            <h3 className="text-3xl font-light tracking-tight">
+              let's connect
+            </h3>
+            <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
+          </div>
+
+          <div className="space-y-8">
+            <div>
+              <a
+                href="mailto:hello@farukkandemir.dev"
+                className="text-lg text-gray-700 hover:text-black transition-colors font-light"
+              >
+                hello@farukkandemir.dev
+              </a>
             </div>
 
-            <div className="space-y-8">
-              <div className="flex justify-center">
-                <a
-                  href="mailto:hello@farukkandemir.dev"
-                  className="inline-flex items-center space-x-3 text-lg text-gray-700 hover:text-black transition-colors font-light group"
-                >
-                  <div className="w-2 h-2 bg-gray-400 rounded-full group-hover:bg-black transition-colors"></div>
-                  <span>hello@farukkandemir.dev</span>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full group-hover:bg-black transition-colors"></div>
-                </a>
-              </div>
-
-              <div className="flex justify-center space-x-8">
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-800 transition-all duration-300 font-light relative group"
-                >
-                  github
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-800 transition-all duration-300 font-light relative group"
-                >
-                  linkedin
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-800 transition-all duration-300 font-light relative group"
-                >
-                  twitter
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </div>
-
-              <div className="pt-8 border-t border-gray-200">
-                <p className="text-sm text-gray-400 font-light">
-                  © 2024 faruk kandemir. all rights reserved.
-                </p>
-              </div>
+            <div className="pt-8 border-t border-gray-200">
+              <p className="text-sm text-gray-400 font-light">
+                © 2024 faruk kandemir. all rights reserved.
+              </p>
             </div>
           </div>
         </div>
