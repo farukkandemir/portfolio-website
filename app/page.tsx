@@ -317,7 +317,6 @@ export default function Home() {
             <h3 className="text-3xl font-light tracking-tight">
               let's connect
             </h3>
-            <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
           </div>
 
           <div className="space-y-8">
