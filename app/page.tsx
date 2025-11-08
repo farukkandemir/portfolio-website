@@ -150,14 +150,14 @@ export default function Home() {
               >
                 faruk kandemir
               </h1>
-              <div className="w-8 h-px bg-gray-300 mx-auto"></div>
+              <div className="w-8 h-px bg-gray-300"></div>
             </motion.div>
 
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 tracking-tight relative">
-              full stack developer
+              software engineer
               <br />
               <span className="relative">
-                crafting digital experiences
+                problem solver & builder
                 <motion.div
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
@@ -174,8 +174,9 @@ export default function Home() {
               className="mb-8"
             >
               <p className="text-lg text-gray-600 font-light max-w-2xl leading-relaxed">
-                turning ideas into digital experiences with clean code,
-                thoughtful design, and scalable solutions
+                i build software that solves real problems, from concept to
+                deployment, with a focus on performance, accessibility, and user
+                experience
               </p>
             </motion.div>
           </motion.div>
