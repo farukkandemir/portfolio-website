@@ -22,7 +22,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.4, delay: 0.3 }}
           className="space-y-6"
         >
           {/* Skills */}
@@ -86,7 +86,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.4, delay: 0.5 }}
           className="space-y-6"
         >
           {/* Social Links */}
