@@ -2,6 +2,148 @@
 
 import { motion } from "framer-motion";
 import { ModeToggle } from "@/components/modules/ModeToggle";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+
+// Mobile Navigation Component
+function MobileNavigation() {
+  const [skillsOpen, setSkillsOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+
+  return (
+    <div className="space-y-3">
+      {/* Skills Section */}
+      <motion.div
+        className="bg-card/95 backdrop-blur-md rounded-lg border border-border/50 overflow-hidden"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+        <button
+          onClick={() => setSkillsOpen(!skillsOpen)}
+          className="w-full px-4 py-3 flex items-center justify-between text-sm font-light text-muted-foreground hover:text-primary transition-colors"
+        >
+          <span>skills</span>
+          {skillsOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+        </button>
+
+        <motion.div
+          initial={false}
+          animate={{ height: skillsOpen ? "auto" : 0 }}
+          className="overflow-hidden"
+        >
+          <div className="px-4 pb-4 space-y-4">
+            <div>
+              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
+                core technologies
+              </h4>
+              <div className="text-xs font-light text-muted-foreground space-y-1">
+                <div>typescript & javascript</div>
+                <div>react & next.js</div>
+                <div>node.js</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
+                frontend expertise
+              </h4>
+              <div className="text-xs font-light text-muted-foreground space-y-1">
+                <div>tailwind css</div>
+                <div>framer motion</div>
+                <div>shadcn/ui</div>
+                <div>redux & zustand</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
+                backend & infrastructure
+              </h4>
+              <div className="text-xs font-light text-muted-foreground space-y-1">
+                <div>express.js</div>
+                <div>prisma</div>
+                <div>mongodb & postgresql</div>
+                <div>rest apis</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
+                development tools
+              </h4>
+              <div className="text-xs font-light text-muted-foreground space-y-1">
+                <div>git</div>
+                <div>docker</div>
+                <div>aws</div>
+                <div>ci/cd</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Contact Section */}
+      <motion.div
+        className="bg-card/95 backdrop-blur-md rounded-lg border border-border/50 overflow-hidden"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.7 }}
+      >
+        <button
+          onClick={() => setContactOpen(!contactOpen)}
+          className="w-full px-4 py-3 flex items-center justify-between text-sm font-light text-muted-foreground hover:text-primary transition-colors"
+        >
+          <span>connect</span>
+          {contactOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+        </button>
+
+        <motion.div
+          initial={false}
+          animate={{ height: contactOpen ? "auto" : 0 }}
+          className="overflow-hidden"
+        >
+          <div className="px-4 pb-4 space-y-3">
+            <a
+              href="https://github.com/farukkandemir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
+            >
+              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
+              <span>github</span>
+            </a>
+            <a
+              href="https://linkedin.com/in/farukkandemir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
+            >
+              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
+              <span>linkedin</span>
+            </a>
+            <a
+              href="https://twitter.com/farukkandemir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
+            >
+              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
+              <span>twitter</span>
+            </a>
+            <a
+              href="mailto:hello@farukkandemir.dev"
+              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
+            >
+              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
+              <span>email</span>
+            </a>
+          </div>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -9,6 +151,13 @@ export default function Home() {
       {/* Theme Toggle */}
       <div className="fixed top-6 right-6 z-50">
         <ModeToggle />
+      </div>
+
+      {/* Mobile Navigation - Skills & Contact */}
+      <div className="lg:hidden">
+        <div className="fixed bottom-6 left-6 right-6 z-40">
+          <MobileNavigation />
+        </div>
       </div>
 
       {/* Subtle background pattern */}
