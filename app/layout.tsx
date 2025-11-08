@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Faruk Kandemir",
   },
   description:
-    "Full Stack Developer specializing in building exceptional digital experiences with React, Next.js, TypeScript, and modern web technologies. Creating scalable solutions for real-world problems.",
+    "Full Stack Developer creating practical software solutions. Building applications that solve real problems.",
   keywords: [
     "Faruk Kandemir",
     "Full Stack Developer",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     url: "https://farukkandemir.dev",
     title: "Faruk Kandemir | Full Stack Developer",
     description:
-      "Full Stack Developer specializing in building exceptional digital experiences with modern web technologies. Explore my portfolio of React, Next.js, and TypeScript projects.",
+      "Full Stack Developer creating practical software solutions. Explore my portfolio of web development projects.",
     siteName: "Faruk Kandemir Portfolio",
     images: [
       {
@@ -74,8 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Faruk Kandemir | Full Stack Developer",
-    description:
-      "Full Stack Developer specializing in building exceptional digital experiences with React, Next.js, and TypeScript.",
+    description: "Full Stack Developer creating practical software solutions.",
     creator: "@farukkandemir",
     images: ["/og-image.png"],
   },
@@ -140,7 +139,7 @@ export default function RootLayout({
               name: "Faruk Kandemir",
               jobTitle: "Full Stack Developer",
               description:
-                "Full Stack Developer specializing in building exceptional digital experiences with React, Next.js, TypeScript, and modern web technologies.",
+                "Full Stack Developer creating practical software solutions.",
               url: "https://farukkandemir.dev",
               sameAs: [
                 "https://github.com/farukkandemir",
