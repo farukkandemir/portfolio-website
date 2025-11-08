@@ -170,37 +170,20 @@ export default function Home() {
             <div className="space-y-8">
               {/* Project */}
               <article className="group cursor-pointer">
-                <h4 className="text-2xl font-light mb-2">
-                  e-commerce platform
-                </h4>
+                <h4 className="text-2xl font-light mb-2">Foot Notes</h4>
                 <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
-                  full-stack e-commerce solution with modern react frontend and
-                  node.js backend.
+                  A web app to track favorite soccer teams and players,
+                  featuring interactive games and challenges for soccer fans.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex gap-4 text-sm text-gray-500 font-light">
-                    <span>react</span>
-                    <span>next.js</span>
-                    <span>node.js</span>
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                    <span>Tailwind</span>
                   </div>
                   <span className="text-sm text-gray-400 font-light">2024</span>
-                </div>
-              </article>
-
-              {/* Project */}
-              <article className="group cursor-pointer">
-                <h4 className="text-2xl font-light mb-2">design system</h4>
-                <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
-                  comprehensive design system built with react, typescript, and
-                  tailwind css.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-4 text-sm text-gray-500 font-light">
-                    <span>typescript</span>
-                    <span>tailwind</span>
-                    <span>storybook</span>
-                  </div>
-                  <span className="text-sm text-gray-400 font-light">2023</span>
                 </div>
               </article>
             </div>
@@ -222,11 +205,11 @@ export default function Home() {
                     Full Stack Developer
                   </h4>
                   <span className="text-sm text-gray-400 font-light">
-                    2023 — Present
+                    Oct 2024 — Present
                   </span>
                 </div>
                 <p className="text-base font-light text-gray-500 mb-4">
-                  TechCorp Solutions
+                  Enbasis
                 </p>
                 <div className="w-8 h-px bg-gray-200"></div>
               </div>
@@ -234,14 +217,14 @@ export default function Home() {
               <div>
                 <div className="flex items-center justify-between mb-1">
                   <h4 className="text-xl font-light text-gray-800">
-                    Frontend Developer
+                    Full Stack Developer
                   </h4>
                   <span className="text-sm text-gray-400 font-light">
-                    2022 — 2023
+                    Sep 2023 — Sep 2024
                   </span>
                 </div>
                 <p className="text-base font-light text-gray-500 mb-4">
-                  Digital Agency Pro
+                  Renoster
                 </p>
                 <div className="w-8 h-px bg-gray-200"></div>
               </div>
@@ -249,13 +232,13 @@ export default function Home() {
               <div>
                 <div className="flex items-center justify-between mb-1">
                   <h4 className="text-xl font-light text-gray-700">
-                    Junior Developer
+                    Junior Full Stack Developer
                   </h4>
                   <span className="text-sm text-gray-400 font-light">
-                    2021 — 2022
+                    Jan 2023 — Dec 2024
                   </span>
                 </div>
-                <p className="text-base font-light text-gray-500">StartupXYZ</p>
+                <p className="text-base font-light text-gray-500">Aclymate</p>
               </div>
             </div>
           </div>
