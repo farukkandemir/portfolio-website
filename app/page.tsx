@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ModeToggle } from "@/components/modules/ModeToggle";
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 // Mobile Navigation Component
 function MobileNavigation() {
@@ -11,135 +11,199 @@ function MobileNavigation() {
   const [contactOpen, setContactOpen] = useState(false);
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       {/* Skills Section */}
       <motion.div
-        className="bg-card/95 backdrop-blur-md rounded-lg border border-border/50 overflow-hidden"
+        className="relative"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.6 }}
+        transition={{ delay: 0.6, duration: 0.4, ease: "easeOut" }}
       >
-        <button
-          onClick={() => setSkillsOpen(!skillsOpen)}
-          className="w-full px-4 py-3 flex items-center justify-between text-sm font-light text-muted-foreground hover:text-primary transition-colors"
-        >
-          <span>skills</span>
-          {skillsOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-        </button>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl" />
+        <div className="relative bg-card/90 backdrop-blur-xl rounded-2xl border border-border/30 shadow-lg overflow-hidden">
+          <button
+            onClick={() => setSkillsOpen(!skillsOpen)}
+            className="w-full px-5 py-4 flex items-center justify-between text-sm font-light tracking-wide transition-all duration-300 hover:bg-muted/20"
+          >
+            <span className="text-foreground">skills</span>
+            <motion.div
+              animate={{ rotate: skillsOpen ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            </motion.div>
+          </button>
 
-        <motion.div
-          initial={false}
-          animate={{ height: skillsOpen ? "auto" : 0 }}
-          className="overflow-hidden"
-        >
-          <div className="px-4 pb-4 space-y-4">
-            <div>
-              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
-                core technologies
-              </h4>
-              <div className="text-xs font-light text-muted-foreground space-y-1">
-                <div>typescript & javascript</div>
-                <div>react & next.js</div>
-                <div>node.js</div>
+          <motion.div
+            initial={false}
+            animate={{
+              height: skillsOpen ? "auto" : 0,
+              opacity: skillsOpen ? 1 : 0,
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="px-5 pb-5 space-y-5">
+              <div className="space-y-3">
+                <div>
+                  <h4 className="text-xs font-light text-primary tracking-wider mb-3">
+                    core technologies
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="text-xs font-light text-muted-foreground">
+                      typescript & javascript
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      react & next.js
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      node.js
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+                <div>
+                  <h4 className="text-xs font-light text-primary tracking-wider mb-3">
+                    frontend expertise
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="text-xs font-light text-muted-foreground">
+                      tailwind css
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      framer motion
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      shadcn/ui
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      redux & zustand
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+                <div>
+                  <h4 className="text-xs font-light text-primary tracking-wider mb-3">
+                    backend & infrastructure
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="text-xs font-light text-muted-foreground">
+                      express.js
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      prisma
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      mongodb & postgresql
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      rest apis
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+                <div>
+                  <h4 className="text-xs font-light text-primary tracking-wider mb-3">
+                    development tools
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="text-xs font-light text-muted-foreground">
+                      git
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      docker
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      aws
+                    </div>
+                    <div className="text-xs font-light text-muted-foreground">
+                      ci/cd
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div>
-              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
-                frontend expertise
-              </h4>
-              <div className="text-xs font-light text-muted-foreground space-y-1">
-                <div>tailwind css</div>
-                <div>framer motion</div>
-                <div>shadcn/ui</div>
-                <div>redux & zustand</div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
-                backend & infrastructure
-              </h4>
-              <div className="text-xs font-light text-muted-foreground space-y-1">
-                <div>express.js</div>
-                <div>prisma</div>
-                <div>mongodb & postgresql</div>
-                <div>rest apis</div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-xs font-light text-muted-foreground tracking-wider mb-2">
-                development tools
-              </h4>
-              <div className="text-xs font-light text-muted-foreground space-y-1">
-                <div>git</div>
-                <div>docker</div>
-                <div>aws</div>
-                <div>ci/cd</div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* Contact Section */}
       <motion.div
-        className="bg-card/95 backdrop-blur-md rounded-lg border border-border/50 overflow-hidden"
+        className="relative"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.7 }}
+        transition={{ delay: 0.7, duration: 0.4, ease: "easeOut" }}
       >
-        <button
-          onClick={() => setContactOpen(!contactOpen)}
-          className="w-full px-4 py-3 flex items-center justify-between text-sm font-light text-muted-foreground hover:text-primary transition-colors"
-        >
-          <span>connect</span>
-          {contactOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-        </button>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl" />
+        <div className="relative bg-card/90 backdrop-blur-xl rounded-2xl border border-border/30 shadow-lg overflow-hidden">
+          <button
+            onClick={() => setContactOpen(!contactOpen)}
+            className="w-full px-5 py-4 flex items-center justify-between text-sm font-light tracking-wide transition-all duration-300 hover:bg-muted/20"
+          >
+            <span className="text-foreground">connect</span>
+            <motion.div
+              animate={{ rotate: contactOpen ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            </motion.div>
+          </button>
 
-        <motion.div
-          initial={false}
-          animate={{ height: contactOpen ? "auto" : 0 }}
-          className="overflow-hidden"
-        >
-          <div className="px-4 pb-4 space-y-3">
-            <a
-              href="https://github.com/farukkandemir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
-            >
-              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
-              <span>github</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/farukkandemir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
-            >
-              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
-              <span>linkedin</span>
-            </a>
-            <a
-              href="https://twitter.com/farukkandemir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
-            >
-              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
-              <span>twitter</span>
-            </a>
-            <a
-              href="mailto:hello@farukkandemir.dev"
-              className="flex items-center space-x-2 text-sm font-light text-muted-foreground hover:text-primary transition-colors"
-            >
-              <span className="w-1.5 h-1.5 bg-muted rounded-full"></span>
-              <span>email</span>
-            </a>
-          </div>
-        </motion.div>
+          <motion.div
+            initial={false}
+            animate={{
+              height: contactOpen ? "auto" : 0,
+              opacity: contactOpen ? 1 : 0,
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="px-5 pb-5 space-y-4">
+              <div className="space-y-3">
+                <a
+                  href="https://github.com/farukkandemir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <span className="w-2 h-2 bg-primary/20 rounded-full group-hover:bg-primary/40 transition-colors" />
+                  <span>github</span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/farukkandemir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <span className="w-2 h-2 bg-primary/20 rounded-full group-hover:bg-primary/40 transition-colors" />
+                  <span>linkedin</span>
+                </a>
+                <a
+                  href="https://twitter.com/farukkandemir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <span className="w-2 h-2 bg-primary/20 rounded-full group-hover:bg-primary/40 transition-colors" />
+                  <span>twitter</span>
+                </a>
+                <a
+                  href="mailto:hello@farukkandemir.dev"
+                  className="flex items-center space-x-3 text-sm font-light text-muted-foreground hover:text-primary transition-colors group"
+                >
+                  <span className="w-2 h-2 bg-primary/20 rounded-full group-hover:bg-primary/40 transition-colors" />
+                  <span>email</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );
