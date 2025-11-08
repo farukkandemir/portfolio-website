@@ -237,7 +237,7 @@ export default function Home() {
                       <span>Tailwind</span>
                     </div>
                     <span className="text-sm text-muted-foreground font-light">
-                      2024
+                      2025
                     </span>
                   </div>
                 </article>
