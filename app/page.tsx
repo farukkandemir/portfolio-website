@@ -143,7 +143,7 @@ export default function Home() {
               <div className="w-8 h-px bg-gray-300"></div>
             </div>
 
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 tracking-tight">
               software engineer
               <br />
               problem solver & builder
@@ -217,45 +217,45 @@ export default function Home() {
 
             <div className="space-y-8">
               <div>
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center justify-between mb-1">
                   <h4 className="text-xl font-light text-gray-900">
                     Full Stack Developer
                   </h4>
-                  <span className="text-sm text-gray-500 font-light">
+                  <span className="text-sm text-gray-400 font-light">
                     2023 — Present
                   </span>
                 </div>
-                <p className="text-lg font-light text-black">
+                <p className="text-base font-light text-gray-500 mb-4">
                   TechCorp Solutions
                 </p>
-                <div className="w-8 h-px bg-gray-200 mt-4"></div>
+                <div className="w-8 h-px bg-gray-200"></div>
               </div>
 
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="text-xl font-light text-gray-900">
+                <div className="flex items-center justify-between mb-1">
+                  <h4 className="text-xl font-light text-gray-800">
                     Frontend Developer
                   </h4>
-                  <span className="text-sm text-gray-500 font-light">
+                  <span className="text-sm text-gray-400 font-light">
                     2022 — 2023
                   </span>
                 </div>
-                <p className="text-lg font-light text-black">
+                <p className="text-base font-light text-gray-500 mb-4">
                   Digital Agency Pro
                 </p>
-                <div className="w-8 h-px bg-gray-200 mt-4"></div>
+                <div className="w-8 h-px bg-gray-200"></div>
               </div>
 
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="text-xl font-light text-gray-900">
+                <div className="flex items-center justify-between mb-1">
+                  <h4 className="text-xl font-light text-gray-700">
                     Junior Developer
                   </h4>
-                  <span className="text-sm text-gray-500 font-light">
+                  <span className="text-sm text-gray-400 font-light">
                     2021 — 2022
                   </span>
                 </div>
-                <p className="text-lg font-light text-black">StartupXYZ</p>
+                <p className="text-base font-light text-gray-500">StartupXYZ</p>
               </div>
             </div>
           </div>
