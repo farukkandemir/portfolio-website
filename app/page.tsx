@@ -516,7 +516,7 @@ export default function Home() {
                     Full Stack Developer
                   </h4>
                   <span className="text-sm text-muted-foreground font-light">
-                    Oct 2024 — Present
+                    Oct 2025 — Present
                   </span>
                 </div>
                 <p className="text-base font-light text-muted-foreground mb-4">
