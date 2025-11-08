@@ -336,7 +336,7 @@ export default function Home() {
       {/* Footer/Contact */}
       <footer
         id="contact"
-        className="border-t border-border py-16 px-8 lg:px-32 bg-muted/30 relative max-w-6xl mx-auto"
+        className="py-16 px-8 lg:px-32 relative max-w-6xl mx-auto"
       >
         <div className="text-left">
           <div className="flex items-center space-x-4 mb-8">
@@ -355,9 +355,9 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="pt-8 border-t border-border">
+            <div className="pt-8">
               <p className="text-sm text-muted-foreground font-light">
-                © 2024 faruk kandemir. all rights reserved.
+                © 2025 faruk kandemir. all rights reserved.
               </p>
             </div>
           </div>
