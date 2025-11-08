@@ -400,11 +400,11 @@ export default function Home() {
               <div className="w-8 h-px bg-muted"></div>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 tracking-tight">
               software engineer
               <br />
               problem solver & builder
-            </h2>
+            </h1>
 
             <p className="text-lg text-muted-foreground font-light max-w-2xl leading-relaxed">
               i build software that solves real problems, from concept to
@@ -415,13 +415,16 @@ export default function Home() {
         </section>
 
         {/* Featured Work */}
-        <section id="work" className="mb-24">
+        <section id="work" className="mb-24" aria-labelledby="work-heading">
           <div>
             <div className="flex items-center space-x-4 mb-12">
-              <h3 className="text-3xl font-light tracking-tight">
+              <h2
+                id="work-heading"
+                className="text-3xl font-light tracking-tight"
+              >
                 featured work
-              </h3>
-              <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
+              </h2>
+              <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
 
             <div className="space-y-8">
@@ -490,11 +493,20 @@ export default function Home() {
         </section>
 
         {/* Experience */}
-        <section id="experience" className="mb-24">
+        <section
+          id="experience"
+          className="mb-24"
+          aria-labelledby="experience-heading"
+        >
           <div>
             <div className="flex items-center space-x-4 mb-16">
-              <h3 className="text-3xl font-light tracking-tight">experience</h3>
-              <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
+              <h2
+                id="experience-heading"
+                className="text-3xl font-light tracking-tight"
+              >
+                experience
+              </h2>
+              <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
             </div>
 
             <div className="space-y-8">
@@ -550,12 +562,13 @@ export default function Home() {
       <footer
         id="contact"
         className="py-16 px-8 lg:px-32 relative max-w-6xl mx-auto"
+        role="contentinfo"
       >
         <div className="text-left">
           <div className="flex items-center space-x-4 mb-8">
-            <h3 className="text-3xl font-light tracking-tight">
+            <h2 className="text-3xl font-light tracking-tight">
               let's connect
-            </h3>
+            </h2>
           </div>
 
           <div className="space-y-8">
