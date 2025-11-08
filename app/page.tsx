@@ -567,7 +567,7 @@ export default function Home() {
         <div className="text-left">
           <div className="flex items-center space-x-4 mb-8">
             <h2 className="text-3xl font-light tracking-tight">
-              let's connect
+              let&apos;s connect
             </h2>
           </div>
 
