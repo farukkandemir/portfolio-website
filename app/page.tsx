@@ -401,7 +401,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 tracking-tight">
-              software engineer
+              full stack developer
               <br />
               problem solver & builder
             </h1>
