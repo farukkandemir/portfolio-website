@@ -28,34 +28,54 @@ export default function Home() {
           {/* Skills */}
           <div className="space-y-4">
             <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider">
-              frontend
+              core technologies
             </h4>
             <div className="space-y-2">
+              <div className="text-sm font-light text-gray-600">
+                typescript & javascript
+              </div>
               <div className="text-sm font-light text-gray-600">
                 react & next.js
               </div>
-              <div className="text-sm font-light text-gray-600">typescript</div>
+              <div className="text-sm font-light text-gray-600">node.js</div>
+            </div>
+
+            <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider mt-6">
+              frontend expertise
+            </h4>
+            <div className="space-y-2">
               <div className="text-sm font-light text-gray-600">
                 tailwind css
+              </div>
+              <div className="text-sm font-light text-gray-600">
+                framer motion
+              </div>
+              <div className="text-sm font-light text-gray-600">shadcn/ui</div>
+              <div className="text-sm font-light text-gray-600">
+                redux & zustand
               </div>
             </div>
 
             <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider mt-6">
-              backend
+              backend & infrastructure
             </h4>
             <div className="space-y-2">
-              <div className="text-sm font-light text-gray-600">node.js</div>
-              <div className="text-sm font-light text-gray-600">python</div>
-              <div className="text-sm font-light text-gray-600">postgresql</div>
+              <div className="text-sm font-light text-gray-600">express.js</div>
+              <div className="text-sm font-light text-gray-600">prisma</div>
+              <div className="text-sm font-light text-gray-600">
+                mongodb & postgresql
+              </div>
+              <div className="text-sm font-light text-gray-600">rest apis</div>
             </div>
 
             <h4 className="text-sm font-light text-gray-400 uppercase tracking-wider mt-6">
-              tools
+              development tools
             </h4>
             <div className="space-y-2">
               <div className="text-sm font-light text-gray-600">git</div>
               <div className="text-sm font-light text-gray-600">docker</div>
               <div className="text-sm font-light text-gray-600">aws</div>
+              <div className="text-sm font-light text-gray-600">ci/cd</div>
             </div>
           </div>
         </motion.div>
@@ -168,6 +188,26 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
+              {/* Project */}
+              <article className="group cursor-pointer">
+                <h4 className="text-2xl font-light mb-2">Cinemora</h4>
+                <p className="text-gray-600 font-light leading-relaxed mb-4 max-w-lg">
+                  A movie organization platform with personal collections,
+                  watching lists, and smart organization features for movie
+                  enthusiasts.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-4 text-sm text-gray-500 font-light">
+                    <span>TanStack Start</span>
+                    <span>TypeScript</span>
+                    <span>Shadcn</span>
+                    <span>Supabase</span>
+                    <span>Tailwind</span>
+                  </div>
+                  <span className="text-sm text-gray-400 font-light">2024</span>
+                </div>
+              </article>
+
               {/* Project */}
               <article className="group cursor-pointer">
                 <h4 className="text-2xl font-light mb-2">Foot Notes</h4>
