@@ -131,19 +131,9 @@ export default function Home() {
       <main className="relative max-w-6xl mx-auto px-8 py-20 lg:px-32">
         {/* Hero Headline */}
         <section className="mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-left relative"
-          >
+          <div className="text-left relative">
             {/* Name */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-8"
-            >
+            <div className="mb-8">
               <h1
                 className="text-2xl font-light tracking-wide text-gray-600 mb-2"
                 style={{ fontFamily: "var(--font-geist-sans)" }}
@@ -151,45 +141,25 @@ export default function Home() {
                 faruk kandemir
               </h1>
               <div className="w-8 h-px bg-gray-300"></div>
-            </motion.div>
+            </div>
 
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 tracking-tight relative">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 tracking-tight">
               software engineer
               <br />
-              <span className="relative">
-                problem solver & builder
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 1, delay: 0.5 }}
-                  className="absolute -bottom-2 left-0 right-0 h-px bg-black origin-left"
-                />
-              </span>
+              problem solver & builder
             </h2>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mb-8"
-            >
-              <p className="text-lg text-gray-600 font-light max-w-2xl leading-relaxed">
-                i build software that solves real problems, from concept to
-                deployment, with a focus on performance, accessibility, and user
-                experience
-              </p>
-            </motion.div>
-          </motion.div>
+            <p className="text-lg text-gray-600 font-light max-w-2xl leading-relaxed">
+              i build software that solves real problems, from concept to
+              deployment, with a focus on performance, accessibility, and user
+              experience
+            </p>
+          </div>
         </section>
 
         {/* Featured Work */}
         <section id="work" className="mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <div className="flex items-center space-x-4 mb-12">
               <h3 className="text-3xl font-light tracking-tight">
                 featured work
@@ -234,17 +204,12 @@ export default function Home() {
                 </div>
               </article>
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Experience */}
         <section id="experience" className="mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <div className="flex items-center space-x-4 mb-12">
               <h3 className="text-3xl font-light tracking-tight">about</h3>
               <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent"></div>
@@ -262,7 +227,7 @@ export default function Home() {
                 maintainable code.
               </p>
             </div>
-          </motion.div>
+          </div>
         </section>
       </main>
 
@@ -272,13 +237,7 @@ export default function Home() {
         className="border-t border-gray-100 py-16 px-8 bg-gray-50/30"
       >
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
+          <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-8">
               <div className="flex-1 h-px bg-gradient-to-l from-gray-200 to-transparent"></div>
               <h3 className="text-3xl font-light tracking-tight px-8">
@@ -289,43 +248,38 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="flex justify-center">
-                <motion.a
+                <a
                   href="mailto:hello@farukkandemir.dev"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center space-x-3 text-lg text-gray-700 hover:text-black transition-colors font-light group"
                 >
                   <div className="w-2 h-2 bg-gray-400 rounded-full group-hover:bg-black transition-colors"></div>
                   <span>hello@farukkandemir.dev</span>
                   <div className="w-2 h-2 bg-gray-400 rounded-full group-hover:bg-black transition-colors"></div>
-                </motion.a>
+                </a>
               </div>
 
               <div className="flex justify-center space-x-8">
-                <motion.a
+                <a
                   href="#"
-                  whileHover={{ y: -2 }}
                   className="text-sm text-gray-500 hover:text-gray-800 transition-all duration-300 font-light relative group"
                 >
                   github
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
-                </motion.a>
-                <motion.a
+                </a>
+                <a
                   href="#"
-                  whileHover={{ y: -2 }}
                   className="text-sm text-gray-500 hover:text-gray-800 transition-all duration-300 font-light relative group"
                 >
                   linkedin
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
-                </motion.a>
-                <motion.a
+                </a>
+                <a
                   href="#"
-                  whileHover={{ y: -2 }}
                   className="text-sm text-gray-500 hover:text-gray-800 transition-all duration-300 font-light relative group"
                 >
                   twitter
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-gray-800 transition-all duration-300 group-hover:w-full"></span>
-                </motion.a>
+                </a>
               </div>
 
               <div className="pt-8 border-t border-gray-200">
@@ -334,7 +288,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </footer>
     </div>
